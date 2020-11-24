@@ -1,0 +1,29 @@
+﻿form {
+    display: flex;
+    height: 100%;
+}
+
+fieldset {
+    margin: auto;
+    display: flex;
+}
+
+.form-input {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+}
+
+.form-text-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}

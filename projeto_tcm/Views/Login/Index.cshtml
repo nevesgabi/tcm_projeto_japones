@@ -1,0 +1,42 @@
+﻿
+@model projeto_tcm.Models.UserLogin
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@Styles.Render("~/Content/Login.css")
+
+@using (Html.BeginForm("VerificarUsuario", "Login", FormMethod.Post))
+{
+    <fieldset>
+        <div class="form-input">
+            <div align="center">
+                <img src="~/Content/imagens/sushi.jpg" width="180px" height="125px" />
+            </div>
+            <div class="form-text-input">
+                @Html.LabelFor(m => m.nome_usuario)
+
+                @Html.TextBoxFor(m => m.nome_usuario)
+            </div>
+            <div>
+                @Html.ValidationMessageFor(m => m.nome_usuario, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-text-input">
+                @Html.LabelFor(m => m.senha)
+                @Html.PasswordFor(m => m.senha)
+            </div>
+            <div>
+                @Html.ValidationMessageFor(m => m.senha, "", new { @class = "text-danger" }) 
+            </div>
+            <br>
+            <div class="form-button">
+                <button type="submit" class="btn btn-danger">Login</button>
+            </div>
+        </div>
+    </fieldset>
+}
+
+
+
+
