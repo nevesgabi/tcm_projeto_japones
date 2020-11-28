@@ -7,6 +7,15 @@ body {
     padding-bottom: 20px;
 }
 
+.body-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.navbar-wrapper {
+    width: 30%;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
