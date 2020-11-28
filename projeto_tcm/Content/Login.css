@@ -19,6 +19,7 @@ fieldset {
 .form-button {
     display: flex;
     justify-content: center;
+
 }
 
 .form-text-input {
@@ -26,4 +27,8 @@ fieldset {
     justify-content: space-between;
     align-items: center;
     margin-top: 5px;
+}
+.menu {
+    margin-top: 0;
+    margin-left: 0;
 }

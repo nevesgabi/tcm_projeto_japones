@@ -1,5 +1,4 @@
-﻿
-@model projeto_tcm.Models.UserLogin
+﻿@model projeto_tcm.Models.UserLogin
 
 @{
     ViewBag.Title = "Login";
@@ -27,7 +26,7 @@
                 @Html.PasswordFor(m => m.senha)
             </div>
             <div>
-                @Html.ValidationMessageFor(m => m.senha, "", new { @class = "text-danger" }) 
+                @Html.ValidationMessageFor(m => m.senha, "", new { @class = "text-danger" })
             </div>
             <br>
             <div class="form-button">
@@ -36,7 +35,3 @@
         </div>
     </fieldset>
 }
-
-
-
-
