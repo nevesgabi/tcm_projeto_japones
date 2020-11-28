@@ -8,19 +8,47 @@
     @Styles.Render("~/Content/Site.css")
 </head>
 <body>
+    @if (Session["usuario"] != null)
+        {
+            <div class=" nav-cima">
+                <nav class="navbar navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                </nav>
+            </div>
+        }
+
     <div class="body-wrapper">
         @if (Session["usuario"] != null)
         {
             <div class="navbar-wrapper">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
+                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-home"> Início</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link active" href="#"><span class="glyphicon glyphicon-user"> Perfil</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-edit"> Cadastro</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-shopping-cart"> Pedido</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-ok"> Pagamento</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-ok"> Cardápio</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-ok"> Gerenciar mesas</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-ok"> Gerenciar produtos</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-cog"> Configurações</span></a>
                     </li>
                 </ul>
             </div>

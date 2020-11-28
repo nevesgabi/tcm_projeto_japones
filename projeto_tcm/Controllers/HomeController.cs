@@ -13,17 +13,13 @@ namespace projeto_tcm.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Perfil()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Cadastro()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
