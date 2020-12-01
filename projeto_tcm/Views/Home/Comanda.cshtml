@@ -1,7 +1,99 @@
-﻿
+﻿@model projeto_tcm.Models.Comanda
 @{
     ViewBag.Title = "Comanda";
 }
 
-<h2>Comanda</h2>
+@Styles.Render("~/Content/css")
 
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <div align="center">
+        <p> Cadastrar comanda</p>
+    </div>
+
+    <div align="center">
+        @Html.LabelFor(m => m.dataComanda)
+
+        @Html.EditorFor(m => m.dataComanda)
+    </div>
+
+    <br />
+
+    <div align="center">
+        @Html.LabelFor(m => m.horarioComanda)
+
+        @Html.EditorFor(m => m.horarioComanda)
+    </div>
+
+    <br />
+
+    <div align="center">
+        @Html.LabelFor(m => m.mesaComanda)
+
+        @Html.EditorFor(m => m.mesaComanda)
+    </div>
+
+    <br />
+
+    <div align="center">
+        @Html.LabelFor(m => m.itemComanda)
+
+        @Html.EditorFor(m => m.itemComanda)
+    </div>
+
+    <br />
+
+    <div align="center">
+        @Html.LabelFor(m => m.quantidadeComanda)
+
+        @Html.EditorFor(m => m.quantidadeComanda)
+    </div>
+
+    <br />
+
+    <div align="center">
+        @Html.LabelFor(m => m.funcionarioComanda)
+
+        @Html.EditorFor(m => m.funcionarioComanda)
+    </div>
+
+    <br />
+
+    <div align="center">
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
+    </div>
+
+    <hr />
+
+    <div align="center">
+        <p> Consultar comanda</p>
+    </div>
+
+    <div align="center">
+        @Html.LabelFor(m => m.idComanda)
+
+        @Html.EditorFor(m => m.idComanda)
+    </div>
+
+    <br />
+
+    <div align="center">
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"> Excluir</span></button>
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Consultar</span></button>
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Encerrar</span></button>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div align="right">
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-th-list"> Visualizar todas</span></button>
+    </div>
+
+
+}

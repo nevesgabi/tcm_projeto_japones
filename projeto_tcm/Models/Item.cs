@@ -16,7 +16,6 @@ namespace projeto_tcm.Models
         [Display(Name = "Descrição:  ")]
         public string DescItem { get; set; }
 
-        [Required(ErrorMessage = "Insira um ID válido!!")]
         [Display(Name = "ID:  ")]
         public string IdItem { get; set; }
     }
