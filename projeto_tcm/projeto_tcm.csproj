@@ -134,6 +134,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Mesa.cs" />
     <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -180,8 +181,8 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Home\Perfil.cshtml" />
     <Content Include="Views\Home\Cadastro.cshtml" />
-    <Content Include="Views\Home\Pedido.cshtml" />
     <Content Include="Views\Home\Pagamento.cshtml" />
+    <Content Include="Views\Home\Mesas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

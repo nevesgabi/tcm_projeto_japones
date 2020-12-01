@@ -22,5 +22,10 @@ namespace projeto_tcm.Controllers
         {
             return View();
         }
+
+        public ActionResult Mesas()
+        {
+            return View();
+        }
     }
 }

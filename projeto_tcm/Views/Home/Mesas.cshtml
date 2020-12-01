@@ -1,0 +1,62 @@
+﻿@model projeto_tcm.Models.Mesa
+@{
+    ViewBag.Title = "Mesas";
+}
+
+@Styles.Render("~/Content/css")
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <div align="center">
+        <p> Cadastrar mesa</p>
+    </div>
+    <div align="center">
+        @Html.LabelFor(m => m.mesa)
+
+        @Html.EditorFor(m => m.mesa)
+    </div>
+    <br />
+    <div align="center">
+        @Html.LabelFor(m => m.statusmesa)
+
+        @Html.EditorFor(m => m.statusmesa)
+    </div>
+    <br />
+    <div align="center">
+        @Html.LabelFor(m => m.assentos)
+
+        @Html.EditorFor(m => m.assentos)
+    </div>
+    <br />
+    <div align="center">
+        <button type="submit" class="btn btn-danger">Adicionar</button>
+    </div>
+    <hr />
+    <div align="center">
+        <p> Consultar mesa</p>
+    </div>
+    <br />
+    <div align="center">
+        @Html.LabelFor(m => m.idmesa)
+
+        @Html.EditorFor(m => m.idmesa)
+    </div>
+    <br />
+    <div align="center">
+        <button type="submit" class="btn btn-danger">Excluir</button>
+        <button type="submit" class="btn btn-danger">Consultar</button>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div align="right">
+        <button type="submit" class="btn btn-danger">Visualizar todas</button>
+    </div>
+
+}
+

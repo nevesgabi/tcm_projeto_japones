@@ -6,11 +6,11 @@ namespace projeto_tcm.Models
     {
         public int cad_usuario { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório informar o nome do aluno!!")]
+        [Required(ErrorMessage = "Insira um usuário válido!!")]
         [Display(Name = "Usuário:  ")]
         public string nome_usuario { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório informar o nome do aluno!!")]
+        [Required(ErrorMessage = "Insira uma senha válida!!")]
         [Display(Name = "Senha:  ")]
         public string senha { get; set; }
     }
