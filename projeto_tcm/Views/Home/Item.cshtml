@@ -1,6 +1,10 @@
-﻿@model projeto_tcm.Models.Mesa
+﻿@model projeto_tcm.Models.Item
 @{
-    ViewBag.Title = "Mesas";
+    /**/
+
+    /**/
+
+    ViewBag.Title = "Itens";
 }
 
 @Styles.Render("~/Content/css")
@@ -10,29 +14,29 @@
     @Html.ValidationSummary(true)
 
     <div align="center">
-        <p> Cadastrar mesa</p>
+        <p>Adicionar item</p>
     </div>
 
     <div align="center">
-        @Html.LabelFor(m => m.mesa)
+        @Html.LabelFor(m => m.NomeItem)
 
-        @Html.EditorFor(m => m.mesa)
-    </div>
-
-    <br />
-
-    <div align="center">
-        @Html.LabelFor(m => m.statusmesa)
-
-        @Html.EditorFor(m => m.statusmesa)
+        @Html.EditorFor(m => m.NomeItem)
     </div>
 
     <br />
 
     <div align="center">
-        @Html.LabelFor(m => m.assentos)
+        @Html.LabelFor(m => m.PrecoItem)
 
-        @Html.EditorFor(m => m.assentos)
+        @Html.EditorFor(m => m.PrecoItem)
+    </div>
+
+    <br />
+
+    <div align="center">
+        @Html.LabelFor(m => m.DescItem)
+
+        @Html.EditorFor(m => m.DescItem)
     </div>
 
     <br />
@@ -44,15 +48,13 @@
     <hr />
 
     <div align="center">
-        <p> Consultar mesa</p>
+        <p> Consultar Item</p>
     </div>
 
-    <br />
-
     <div align="center">
-        @Html.LabelFor(m => m.idmesa)
+        @Html.LabelFor(m => m.IdItem)
 
-        @Html.EditorFor(m => m.idmesa)
+        @Html.EditorFor(m => m.IdItem)
     </div>
 
     <br />
@@ -70,8 +72,7 @@
     <br />
 
     <div align="right">
-        <button type="submit" class="btn btn-danger">Visualizar todas</button>
+        <button type="submit" class="btn btn-danger">Visualizar todos</button>
     </div>
 
 }
-

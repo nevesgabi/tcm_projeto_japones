@@ -13,10 +13,6 @@ namespace projeto_tcm.Controllers
             return View();
         }
 
-        public ActionResult Perfil()
-        {
-            return View();
-        }
 
         public ActionResult Cadastro()
         {
@@ -24,6 +20,16 @@ namespace projeto_tcm.Controllers
         }
 
         public ActionResult Mesas()
+        {
+            return View();
+        }
+
+        public ActionResult Item()
+        {
+            return View();
+        }
+
+        public ActionResult Comanda()
         {
             return View();
         }
