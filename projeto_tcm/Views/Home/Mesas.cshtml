@@ -8,7 +8,7 @@
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
-
+    <div class=""
     <div align="center">
         <p> Cadastrar mesa</p>
     </div>
@@ -38,7 +38,7 @@
     <br />
 
     <div align="center">
-        <button type="submit" class="btn btn-danger">Adicionar</button>
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
     </div>
 
     <hr />
@@ -58,8 +58,8 @@
     <br />
 
     <div align="center">
-        <button type="submit" class="btn btn-danger">Excluir</button>
-        <button type="submit" class="btn btn-danger">Consultar</button>
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"> Excluir</span></button>
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Consultar</span></button>
     </div>
 
     <br />
@@ -70,7 +70,7 @@
     <br />
 
     <div align="right">
-        <button type="submit" class="btn btn-danger">Visualizar todas</button>
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-th-list"> Visualizar todas</span></button>
     </div>
 
 }
