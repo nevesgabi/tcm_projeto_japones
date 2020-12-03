@@ -5,26 +5,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/Site.css")
+    @Styles.Render("~/Content/map")
+    @Styles.Render("~/Scripts/js")
+    @Styles.Render("~/Scripts/map")
 </head>
 <body>
     @if (Session["usuario"] != null)
-        {
-            <div class=" nav-cima">
-                <nav class="navbar navbar-light bg-light">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                </nav>
-            </div>
-        }
+    {
+        <div class="nav-cima">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#"><img src="~/Content/imagens/nome.png" width="200px" height="30px" /></a>
+            </nav>
+        </div>
+    }
 
     <div class="body-wrapper">
         @if (Session["usuario"] != null)
         {
             <div class="navbar-wrapper">
                 <ul class="nav flex-column">
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="#"><span class="glyphicon glyphicon-home"> Início</span></a>
-                    </li>
+                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link" href="#"><span class="glyphicon glyphicon-user"> Cadastro</span></a>
                     </li>

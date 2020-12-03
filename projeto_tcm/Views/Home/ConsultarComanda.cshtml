@@ -1,6 +1,8 @@
 ﻿@model projeto_tcm.Models.Comanda
 @{
-    ViewBag.Title = "Comanda";
+    /**/
+
+    ViewBag.Title = "Consulta de comanda";
 }
 
 @Styles.Render("~/Content/css")
@@ -8,10 +10,18 @@
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
-    <br/>
+    <br />
     <div align="center">
-        <p> Cadastrar comanda</p>
+        <p> Comanda</p>
     </div>
+
+    <div align="center">
+        @Html.LabelFor(m => m.idComanda)
+
+        @Html.EditorFor(m => m.idComanda)
+    </div>
+
+    <br />
 
     <div align="center">
         @Html.LabelFor(m => m.dataComanda)
@@ -60,37 +70,18 @@
     </div>
 
     <br />
-
-    <div align="center">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
-    </div>
-
-    <hr />
-
-    <div align="center">
-        <p> Consultar comanda</p>
-    </div>
-
-    <div align="center">
-        @Html.LabelFor(m => m.idComanda)
-
-        @Html.EditorFor(m => m.idComanda)
-    </div>
-
-    <br />
-
-    <div align="center">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"> Excluir</span></button>
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Consultar</span></button>
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Encerrar</span></button>
-    </div>
-
     <br />
     <br />
-
-    <div align="right">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-th-list"> Visualizar todas</span></button>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div align="left">
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-chevron-left"> Voltar</span></button>
     </div>
-
-
 }

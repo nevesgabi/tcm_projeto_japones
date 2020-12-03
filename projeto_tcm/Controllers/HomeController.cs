@@ -33,5 +33,35 @@ namespace projeto_tcm.Controllers
         {
             return View();
         }
+
+        public ActionResult Pagamento()
+        {
+            return View();
+        }
+
+        public ActionResult ConsultarCadastro()
+        {
+            return View();
+        }
+
+        public ActionResult ConsultarComanda()
+        {
+            return View();
+        }
+
+        public ActionResult ConsultarItem()
+        {
+            return View();
+        }
+
+        public ActionResult ConsultarMesas()
+        {
+            return View();
+        }
+
+        public ActionResult ConsultarPagamento()
+        {
+            return View();
+        }
     }
 }

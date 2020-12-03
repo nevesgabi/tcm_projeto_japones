@@ -11,11 +11,15 @@ body {
     display: flex;
     flex-direction: row;
     height: 100%;
+    color: black;
 }
 
 .navbar-wrapper {
     width: 15%;
     font-size: 18px;
+    color: black !important;
+    background-color: lightgray;
+    text-decoration: none;
     
 }
 /* Set padding to keep content from hitting the edges */
@@ -39,13 +43,25 @@ textarea {
 }
 
 p{
-    font-size: 20px;
+    font-size: 30px;
 }
 .imagem-sushi {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
-.img-perfil{
-    text-align: center;
+.nav-link {
+    color: black !important;
 }
+.navbar {
+    margin-bottom: 0px;
+}
+.navbar-brand {
+    color: black !important;
+}
+
+.nav-cima {
+    background-color: lightgray;
+}
+
+

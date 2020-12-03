@@ -25,8 +25,8 @@ fieldset {
 .form-text-input {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 5px;
+    /*align-items: flex-start;*/
+    margin-top: 15px;
 }
 .menu {
     margin-top: 0;

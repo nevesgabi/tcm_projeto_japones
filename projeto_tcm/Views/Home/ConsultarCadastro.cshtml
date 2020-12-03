@@ -1,9 +1,8 @@
 ﻿@model projeto_tcm.Models.Cadastro
 
 @{
-                /**/
 
-                ViewBag.Title = "Cadastro";
+    ViewBag.Title = "Consulta de cadastro";
 }
 
 @Styles.Render("~/Content/css")
@@ -13,114 +12,96 @@
     @Html.ValidationSummary(true)
     <br/>
     <div align="center">
-        <p><b>Adicionar usuário</b></p>
+        <p><b>Usuário</b></p>
     </div>
     <div align="left">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-1">
+                    @Html.LabelFor(m => m.idCadastro)
+                </div>
+                <div class="col-lg-1">
+                    @Html.EditorFor(m => m.idCadastro)
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-1">
                     @Html.LabelFor(m => m.nomeCadastro)
                 </div>
                 <div class="col-lg-1">
                     @Html.EditorFor(m => m.nomeCadastro)
                 </div>
-                <div class="col-lg-4"></div>
+                <div class="col-lg-2"></div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-lg-2"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.telefoneCadastro)
                 </div>
                 <div class="col-lg-1">
                     @Html.EditorFor(m => m.telefoneCadastro)
                 </div>
-                <div class="col-lg-2"></div>
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-lg-2"></div>
+                <div class="col-lg-4"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.funcaoCadastro)
                 </div>
                 <div class="col-lg-1">
                     @Html.EditorFor(m => m.funcaoCadastro)
                 </div>
-                <div class="col-lg-4"></div>
-                <div class="col-lg-1">
-                    @Html.LabelFor(m => m.enderecoCadastro)
-                </div>
-                <div class="col-lg-1">
-                    @Html.EditorFor(m => m.enderecoCadastro)
-                </div>
                 <div class="col-lg-2"></div>
             </div>
             <br />
             <div class="row">
                 <div class="col-lg-2"></div>
+                <div class="col-lg-1">
+                    @Html.LabelFor(m => m.telefoneCadastro)
+                </div>
+                <div class="col-lg-1">
+                    @Html.EditorFor(m => m.telefoneCadastro)
+                </div>
+                <div class="col-lg-4"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.cpfCadastro)
                 </div>
                 <div class="col-lg-1">
                     @Html.EditorFor(m => m.cpfCadastro)
                 </div>
-                <div class="col-lg-4"></div>
-                <div class="col-lg-1">
-                    @Html.LabelFor(m => m.nivelCadastro)
-                </div>
-                <div class="col-lg-1">
-                    @Html.EditorFor(m => m.nivelCadastro)
-                </div>
                 <div class="col-lg-2"></div>
             </div>
             <br />
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-1">
+                    @Html.LabelFor(m => m.nivelCadastro)
+                </div>
+                <div class="col-lg-1">
+                    @Html.EditorFor(m => m.nivelCadastro)
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-1">
                     @Html.LabelFor(m => m.usuarioCadastro)
                 </div>
                 <div class="col-lg-1">
                     @Html.EditorFor(m => m.usuarioCadastro)
                 </div>
-                <div class="col-lg-4"></div>
-                <div class="col-lg-1">
-                    @Html.LabelFor(m => m.senhaCadastro)
-                </div>
-                <div class="col-lg-1">
-                    @Html.EditorFor(m => m.senhaCadastro)
-                </div>
                 <div class="col-lg-2"></div>
             </div>
         </div>
     </div>
-    <br/>
-    <div align="center">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
-    </div>
-
-    <hr />
-
-    <div align="center">
-        <p> Consultar cadastro</p>
-    </div>
-
-    <div align="center">
-        @Html.LabelFor(m => m.idCadastro)
-
-        @Html.EditorFor(m => m.idCadastro)
-    </div>
-
-    <br />
-
-    <div align="center">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"> Excluir</span></button>
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Consultar</span></button>
-    </div>
-
     <br />
     <br />
     <br />
     <br />
     <br />
-
-    <div align="right">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-th-list"> Visualizar todos</span></button>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div align="left">
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-chevron-left"> Voltar</span></button>
     </div>
 }

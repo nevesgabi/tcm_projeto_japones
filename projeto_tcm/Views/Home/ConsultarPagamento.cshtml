@@ -1,0 +1,81 @@
+﻿@model projeto_tcm.Models.Item
+@{
+
+    ViewBag.Title = "Itens";
+}
+
+@Styles.Render("~/Content/css")
+
+@using (Html.BeginForm()){
+    @Html.ValidationSummary(true)
+    <br />
+    <div align="center">
+        <p>Consulta de pagamento</p>
+    </div>
+    <div align="left">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-1">
+                    @Html.LabelFor(m => m.idPagamento)
+                </div>
+                <div class="col-lg-1">
+                    @Html.EditorFor(m => m.idPagamento)
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-1">
+                    @Html.LabelFor(m => m.comandaPagamento)
+                </div>
+                <div class="col-lg-1">
+                    @Html.EditorFor(m => m.comandaPagamento)
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-1">
+                    @Html.LabelFor(m => m.totalPagamento)
+                </div>
+                <div class="col-lg-1">
+                    @Html.EditorFor(m => m.totalPagamento)
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-1">
+                    @Html.LabelFor(m => m.cpfPagamento)
+                </div>
+                <div class="col-lg-1">
+                    @Html.EditorFor(m => m.cpfPagamento)
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-1">
+                    @Html.LabelFor(m => m.taxaPagamento)
+                </div>
+                <div class="col-lg-1">
+                    @Html.EditorFor(m => m.taxaPagamento)
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-1">
+                    @Html.LabelFor(m => m.totalPago)
+                </div>
+                <div class="col-lg-1">
+                    @Html.EditorFor(m => m.totalPago)
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div align="center">
+                @Html.LabelFor(m => m.trocoPagamento)
+
+                @Html.EditorFor(m => m.trocoPagamento)
+            </div>
+        </div>
+
+        <div align="center">
+            <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-chevron-left"> Voltar</span></button>
+        </div>
+
+        }

@@ -1,0 +1,60 @@
+﻿@model projeto_tcm.Models.Item
+@{
+
+    ViewBag.Title = "Conta de itens";
+}
+
+@Styles.Render("~/Content/css")
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <br />
+    <div align="center">
+        <p>Item</p>
+    </div>
+
+    <div align="center">
+        @Html.LabelFor(m => m.IdItem)
+
+        @Html.EditorFor(m => m.IdItem)
+    </div>
+
+    <br/>
+
+    <div align="center">
+        @Html.LabelFor(m => m.NomeItem)
+
+        @Html.EditorFor(m => m.NomeItem)
+    </div>
+
+    <br />
+
+    <div align="center">
+        @Html.LabelFor(m => m.PrecoItem)
+
+        @Html.EditorFor(m => m.PrecoItem)
+    </div>
+
+    <br />
+
+    <div align="center">
+        @Html.LabelFor(m => m.DescItem)
+
+        @Html.EditorFor(m => m.DescItem)
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div align="left">
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-chevron-left"> Voltar</span></button>
+    </div>
+
+}
