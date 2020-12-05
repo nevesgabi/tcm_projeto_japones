@@ -1,9 +1,9 @@
 ﻿@model projeto_tcm.Models.Cadastro
 
 @{
-                /**/
+    /**/
 
-                ViewBag.Title = "Cadastro";
+    ViewBag.Title = "Cadastro";
 }
 
 @Styles.Render("~/Content/css")
@@ -11,7 +11,7 @@
 @using (Html.BeginForm("CadastrarFuncionario", "Cadastro", FormMethod.Post))
 {
     @Html.ValidationSummary(true)
-    <br/>
+    <br />
     <div align="center">
         <p>Cadastrar funcionário</p>
     </div>
@@ -90,37 +90,37 @@
             </div>
         </div>
     </div>
-    <br/>
+    <br />
     <div align="center">
         <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
     </div>
+}
+<hr />
 
-    <hr />
-
+@using (Html.BeginForm("ConsultarCadastro", "Cadastro", FormMethod.Get))
+{
     <div align="center">
         <p> Consultar funcionário</p>
     </div>
 
     <div align="center">
-        @Html.LabelFor(m => m.idCadastro)
-
-        @Html.EditorFor(m => m.idCadastro)
+        <label for="idFunc">ID:</label>
+        <input id="idFunc" type="tel" name="idFunc"/>
     </div>
-
     <br />
 
     <div align="center">
-        <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-remove"> Excluir </span></a>
-        <a class="btn btn-danger" href="@Url.Action("ConsultarCadastro")"><span class="glyphicon glyphicon-ok"> Consultar </span></a>
-    </div>
-
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <div align="right">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-th-list"> Visualizar todos</span></button>
+        <button type="submit" class="btn btn-danger" formaction=@Url.Action("DeletarCadastro") formmethod="post"><span class="glyphicon glyphicon-remov">Excluir</span></button>
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok">Consultar</span></button>
     </div>
 }
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div align="right">
+    <input type="button" class="btn btn-danger" value="Visualizar todos" onclick="window.location= '@Url.Action("ListarTodos")'" />
+</div>

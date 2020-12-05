@@ -16,9 +16,27 @@ namespace projeto_tcm.Controllers
             return View();
         }
 
-        public ActionResult ConsultarCadastro()
+        public ActionResult ConsultarCadastro(int idFunc)
         {
-            return View();
+            Funcionario func = new Funcionario();
+            Cadastro fu = func.ConsultarFuncionario(idFunc);
+            return View(fu);
+        }
+
+        [HttpPost]
+        public ActionResult DeletarCadastro(int idFunc)
+        {
+            Funcionario func = new Funcionario();
+            func.DeletarFuncionario(idFunc);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult ListarTodos()
+        {
+            Funcionario func = new Funcionario();
+            List<Cadastro> funcionarios = func.ListarTodos();
+
+            return View(funcionarios);
         }
 
         [HttpPost]
@@ -26,9 +44,9 @@ namespace projeto_tcm.Controllers
         {
 
             Funcionario ac = new Funcionario();
-            ac.CadastroFuncionario(cadastro);
+            long id = ac.CadastroFuncionario(cadastro);
 
-            return RedirectToAction("ConsultarCadastro", cadastro);
+            return RedirectToAction("ConsultarCadastro", new { idFunc = id });
         }
     }
 }

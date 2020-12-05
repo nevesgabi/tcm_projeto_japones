@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Funcionario";
+}
+
+@Styles.Render("~/Content/css")
+
+<div class="container-fluid">
+    <h2>Funcionários</h2>
+    @using (Html.BeginForm("ListarFuncionarios", "Funcionario", FormMethod.Get))
+    {
+        <div class="row">
+            <div class="col-md-1">
+                <label for="search-input">ID:</label>
+            </div>
+            <div class="col-md-10">
+                <input type="text" id="search-input"/>
+            </div>
+        </div>
+    }
+</div>
+
