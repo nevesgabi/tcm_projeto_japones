@@ -16,6 +16,10 @@ namespace projeto_tcm.Models
         [Display(Name = "Descrição:  ")]
         public string DescItem { get; set; }
 
+        [Required(ErrorMessage = "Insira uma categoria válida!!")]
+        [Display(Name = "Categoria:  ")]
+        public string CategoriaItem { get; set; }
+
         [Display(Name = "ID:  ")]
         public string IdItem { get; set; }
     }

@@ -1,17 +1,23 @@
-﻿@model projeto_tcm.Models.Item
+﻿@model projeto_tcm.Models.Pagamento
 @{
 
-    ViewBag.Title = "Itens";
+    ViewBag.Title = "Pagamento";
 }
 
 @Styles.Render("~/Content/css")
 
-@using (Html.BeginForm()){
+@using (Html.BeginForm())
+{
     @Html.ValidationSummary(true)
     <br />
+    <div align="left">
+        <a class="nav-link" href="@Url.Action("Pagamento")"><span class="glyphicon glyphicon-chevron-left"> Voltar </span></a>
+    </div>
+
     <div align="center">
         <p>Consulta de pagamento</p>
     </div>
+    <br />
     <div align="left">
         <div class="container-fluid">
             <div class="row">
@@ -67,15 +73,13 @@
                 </div>
                 <div class="col-lg-2"></div>
             </div>
+            <br/>
             <div align="center">
                 @Html.LabelFor(m => m.trocoPagamento)
 
                 @Html.EditorFor(m => m.trocoPagamento)
             </div>
         </div>
+    </div>
 
-        <div align="center">
-            <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-chevron-left"> Voltar</span></button>
-        </div>
-
-        }
+}

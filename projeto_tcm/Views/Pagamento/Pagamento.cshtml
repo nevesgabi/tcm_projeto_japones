@@ -6,24 +6,24 @@
 
 @Styles.Render("~/Content/css")
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("CadastrarPagamento", "Pagamento", FormMethod.Post))
 {
     @Html.ValidationSummary(true)
-    <br/>
-    <div align = "center" >
-    <p>Adicionar pagamento</p>
+    <br />
+    <div align="center">
+        <p>Adicionar pagamento</p>
     </div>
     <div align="left">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-2"></div>
+                <div class="col-lg-3"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.comandaPagamento)
                 </div>
                 <div class="col-lg-1">
                     @Html.EditorFor(m => m.comandaPagamento)
                 </div>
-                <div class="col-lg-4"></div>
+                <div class="col-lg-2"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.totalPagamento)
                 </div>
@@ -34,14 +34,14 @@
             </div>
             <br />
             <div class="row">
-                <div class="col-lg-2"></div>
+                <div class="col-lg-3"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.cpfPagamento)
                 </div>
                 <div class="col-lg-1">
                     @Html.EditorFor(m => m.cpfPagamento)
                 </div>
-                <div class="col-lg-4"></div>
+                <div class="col-lg-2"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.taxaPagamento)
                 </div>
@@ -52,14 +52,14 @@
             </div>
             <br />
             <div class="row">
-                <div class="col-lg-2"></div>
+                <div class="col-lg-3"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.totalPago)
                 </div>
                 <div class="col-lg-1">
                     @Html.EditorFor(m => m.totalPago)
                 </div>
-                <div class="col-lg-4"></div>
+                <div class="col-lg-2"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.trocoPagamento)
                 </div>
@@ -68,14 +68,21 @@
                 </div>
                 <div class="col-lg-2"></div>
             </div>
+            <div align="center">
+                @Html.LabelFor(m => m.statusPagamento)
+                @Html.EditorFor(m => m.statusPagamento)
+            </div>
         </div>
 
+    </div>
+    <div align="center">
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar </span></button>
     </div>
 
     <hr />
 
     <div align="center">
-        <p> Consultar pagamennto</p>
+        <p> Consultar pagamento</p>
     </div>
 
     <div align="center">
@@ -87,8 +94,8 @@
     <br />
 
     <div align="center">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"> Excluir</span></button>
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Consultar</span></button>
+        <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-remove"> Excluir </span></a>
+        <a class="btn btn-danger" href="@Url.Action("ConsultarPagamento")"><span class="glyphicon glyphicon-ok"> Consultar </span></a>
     </div>
 
     <br />

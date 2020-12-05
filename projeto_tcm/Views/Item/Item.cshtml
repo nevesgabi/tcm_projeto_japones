@@ -1,0 +1,86 @@
+﻿@model projeto_tcm.Models.Item
+@{
+
+    ViewBag.Title = "Itens";
+}
+
+@Styles.Render("~/Content/css")
+
+@using (Html.BeginForm("CadastrarItem", "Item", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <br />
+    <div align="center">
+        <p>Adicionar item</p>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-2 custom-info text-center">
+                @Html.LabelFor(m => m.NomeItem)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.NomeItem)
+            </div>
+            <div class="col-lg-5"></div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-2 custom-info text-center">
+                @Html.LabelFor(m => m.PrecoItem)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.PrecoItem)
+            </div>
+            <div class="col-lg-5"></div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-2 custom-info text-center">
+                @Html.LabelFor(m => m.DescItem)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.DescItem)
+            </div>
+            <div class="col-lg-5"></div>
+        </div>
+    </div>
+    <br />
+
+    <div align="center">
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
+    </div>
+
+    <hr />
+
+    <div align="center">
+        <p> Consultar Item</p>
+    </div>
+
+    <div align="center">
+        @Html.LabelFor(m => m.IdItem)
+
+        @Html.EditorFor(m => m.IdItem)
+    </div>
+
+    <br />
+
+    <div align="center">
+        <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-remove"> Excluir </span></a>
+        <a class="btn btn-danger" href="@Url.Action("ConsultarItem")"><span class="glyphicon glyphicon-ok"> Consultar </span></a>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div align="right">
+        <button type="submit" class="btn btn-danger"> <span class="glyphicon glyphicon-th-list"> Visualizar todos</span></button>
+    </div>
+
+}

@@ -1,0 +1,67 @@
+﻿@model projeto_tcm.Models.Item
+@{
+
+    ViewBag.Title = "Conta de itens";
+}
+
+@Styles.Render("~/Content/css")
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <br />
+    <div align="left">
+        <a class="nav-link" href="@Url.Action("Item")"><span class="glyphicon glyphicon-chevron-left"> Voltar </span></a>
+    </div>
+
+    <div align="center">
+        <p>Item</p>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-2 custom-info text-center">
+                @Html.LabelFor(m => m.IdItem)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.IdItem)
+            </div>
+            <div class="col-lg-5"></div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-2 custom-info text-center">
+                @Html.LabelFor(m => m.NomeItem)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.NomeItem)
+            </div>
+            <div class="col-lg-5"></div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-2 custom-info text-center">
+                @Html.LabelFor(m => m.PrecoItem)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.PrecoItem)
+            </div>
+            <div class="col-lg-5"></div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-2 custom-info text-center">
+                @Html.LabelFor(m => m.DescItem)
+            </div>
+
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.DescItem)
+            </div>
+            <div class="col-lg-5"></div>
+        </div>
+    </div>
+
+            }

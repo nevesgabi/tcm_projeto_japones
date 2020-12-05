@@ -8,12 +8,12 @@
 
 @Styles.Render("~/Content/css")
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("CadastrarFuncionario", "Cadastro", FormMethod.Post))
 {
     @Html.ValidationSummary(true)
     <br/>
     <div align="center">
-        <p><b>Adicionar usuário</b></p>
+        <p>Cadastrar funcionário</p>
     </div>
     <div align="left">
         <div class="container-fluid">
@@ -98,7 +98,7 @@
     <hr />
 
     <div align="center">
-        <p> Consultar cadastro</p>
+        <p> Consultar funcionário</p>
     </div>
 
     <div align="center">
@@ -110,8 +110,8 @@
     <br />
 
     <div align="center">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"> Excluir</span></button>
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Consultar</span></button>
+        <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-remove"> Excluir </span></a>
+        <a class="btn btn-danger" href="@Url.Action("ConsultarCadastro")"><span class="glyphicon glyphicon-ok"> Consultar </span></a>
     </div>
 
     <br />

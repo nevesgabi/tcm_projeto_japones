@@ -14,7 +14,7 @@
     {
         <div class="nav-cima">
             <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#"><img src="~/Content/imagens/nome.png" width="200px" height="30px" /></a>
+                <a class="navbar-brand" href="#"><img src="~/Content/imagens/logo_lateral.png" width="110" height="35" /></a>
             </nav>
         </div>
     }
@@ -25,26 +25,27 @@
             <div class="navbar-wrapper">
                 <ul class="nav flex-column">
                     <!--<li class="nav-item">
-                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-home"> Início</span></a>
-                    </li>-->
+        <a class="nav-link" href="#"><span class="glyphicon glyphicon-home"> Início</span></a>
+    </li>-->
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-user"> Cadastro</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-edit"> Comanda</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-ok"> Mesa</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-shopping-cart"> Item</span></a>
+                        <a class="nav-link" href="@Url.Action("Index")"><span class="glyphicon glyphicon-home"> Início</span></a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-ok"> Pagamento</span></a>
+                        <a class="nav-link" href="@Url.Action("Cadastro/Cadastro")"><span class="glyphicon glyphicon-user"> Cadastro</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-cog"> Configurações</span></a>
+                        <a class="nav-link" href="@Url.Action("Comanda/Comanda")"><span class="glyphicon glyphicon-edit"> Comanda</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Mesas/Mesas")"><span class="glyphicon glyphicon-ok"> Mesas</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Item/Item")"><span class="glyphicon glyphicon-shopping-cart"> Item</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Pagamento/Pagamento")"><span class="glyphicon glyphicon-ok"> Pagamento</span></a>
                     </li>
                 </ul>
             </div>

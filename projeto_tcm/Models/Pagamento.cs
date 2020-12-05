@@ -32,6 +32,10 @@ namespace projeto_tcm.Models
         [Display(Name = "Troco:  ")]
         public string trocoPagamento { get; set; }
 
+        [Required(ErrorMessage = "Insira um status válido!")]
+        [Display(Name = "Status:  ")]
+        public string statusPagamento { get; set; }
+
         [Display(Name = "Id:  ")]
         public string idPagamento { get; set; }
     }

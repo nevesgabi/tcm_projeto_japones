@@ -1,0 +1,106 @@
+﻿@model projeto_tcm.Models.Comanda
+@{
+    ViewBag.Title = "Comanda";
+}
+
+@Styles.Render("~/Content/css")
+
+@using (Html.BeginForm("CadastrarComanda", "Comanda", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <br />
+    <div align="center">
+        <p> Cadastrar comanda</p>
+    </div>
+    <br />
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-3"></div>
+            <div class="col-lg-1 custom-info text-center">
+                @Html.LabelFor(m => m.dataComanda)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.dataComanda)
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-1 custom-info text-center">
+                @Html.LabelFor(m => m.horarioComanda)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.horarioComanda)
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-1 custom-info text-center">
+                @Html.LabelFor(m => m.mesaComanda)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.mesaComanda)
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-1 custom-info text-center">
+                @Html.LabelFor(m => m.itemComanda)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.itemComanda)
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-1 custom-info text-center">
+                @Html.LabelFor(m => m.quantidadeComanda)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.quantidadeComanda)
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-1 custom-info text-center">
+                @Html.LabelFor(m => m.funcionarioComanda)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.funcionarioComanda)
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+    <br />
+
+    <div align="center">
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
+    </div>
+
+    <hr />
+
+    <div align="center">
+        <p> Consultar comanda</p>
+    </div>
+
+    <div align="center">
+        @Html.LabelFor(m => m.idComanda)
+
+        @Html.EditorFor(m => m.idComanda)
+    </div>
+
+    <br />
+
+    <div align="center">
+        <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-remove"> Excluir </span></a>
+        <a class="btn btn-danger" href="@Url.Action("ConsultarComanda")"><span class="glyphicon glyphicon-ok"> Consultar </span></a>
+        <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-ok"> Encerrar </span></a>
+    </div>
+
+    <br />
+    <br />
+
+    <div align="right">
+        <a class="btn btn-danger" href="@Url.Action("")"><span class="glyphicon glyphicon-th-list"> Visualizar todas</span></a>
+    </div>
+
+
+}

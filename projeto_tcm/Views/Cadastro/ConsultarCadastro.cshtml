@@ -10,7 +10,10 @@
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
-    <br/>
+    <br />
+    <div align="left">
+        <a class="nav-link" href="@Url.Action("Cadastro")"><span class="glyphicon glyphicon-chevron-left"> Voltar </span></a>
+    </div>
     <div align="center">
         <p><b>Usuário</b></p>
     </div>
@@ -89,19 +92,6 @@
             </div>
         </div>
     </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <div align="left">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-chevron-left"> Voltar</span></button>
-    </div>
+ 
+
 }

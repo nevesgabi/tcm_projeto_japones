@@ -35,5 +35,9 @@ namespace projeto_tcm.Models
         [Required(ErrorMessage = "Insira um total!")]
         [Display(Name = "Total:  ")]
         public string totalComanda { get; set; }
+
+        [Required(ErrorMessage = "Insira um total!")]
+        [Display(Name = "Total:  ")]
+        public string statusComanda { get; set; }
     }
 }
