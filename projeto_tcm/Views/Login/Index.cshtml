@@ -9,30 +9,35 @@
 @using (Html.BeginForm("VerificarUsuario", "Login", FormMethod.Post))
 {
     <fieldset>
-        <div class="form-input">
-            <div align="center">
-                <img src="~/Content/imagens/logo.png" width="180" height="200" />
+        <div id="login-container">
+            <div class="form-input">
+                <div align="center">
+                    <img src="~/Content/imagens/logo.png" width="180" height="200" />
+                </div>
+                <br />
+                <div class="form-text-input">
+                    @Html.LabelFor(m => m.nome_usuario)
+                </div>
+                <div class="text">
+                    @Html.TextBoxFor(m => m.nome_usuario)
+                </div>
+                <div>
+                    @Html.ValidationMessageFor(m => m.nome_usuario, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-text-input">
+                    @Html.LabelFor(m => m.senha)
+                </div>
+                <div class="text">
+                    @Html.PasswordFor(m => m.senha)
+                </div>
+                    <div>
+                        @Html.ValidationMessageFor(m => m.senha, "", new { @class = "text-danger" })
+                    </div>
+                    <br />
+                    <div class="form-button">
+                        <button type="submit" class="btn btn-danger btn-lg">Login</button>
+                    </div>
+                </div>
             </div>
-            <br/>
-            <div class="form-text-input">
-                @Html.LabelFor(m => m.nome_usuario)
-
-                @Html.TextBoxFor(m => m.nome_usuario)
-            </div>
-            <div>
-                @Html.ValidationMessageFor(m => m.nome_usuario, "", new { @class = "text-danger" })
-            </div>
-            <div class="form-text-input">
-                @Html.LabelFor(m => m.senha)
-                @Html.PasswordFor(m => m.senha)
-            </div>
-            <div>
-                @Html.ValidationMessageFor(m => m.senha, "", new { @class = "text-danger" })
-            </div>
-            <br />
-            <div class="form-button">
-                <button type="submit" class="btn btn-danger btn-lg">Login</button>
-            </div>
-        </div>
     </fieldset>
 }
