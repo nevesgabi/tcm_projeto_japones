@@ -8,12 +8,12 @@ using System.Linq;
 
 namespace projeto_tcm.Repositorio
 {
-    public class Funcionario
+    public class FuncionarioRepositorio
     {
         Conexao cn = new Conexao();
         MySqlCommand cmd = new MySqlCommand();
 
-        public long CadastroFuncionario(Cadastro dto)
+        public long CadastroFuncionario(FuncionarioModel dto)
         {
             MySqlCommand cmd = new MySqlCommand(@"
                 INSERT INTO Funcionario(
@@ -55,7 +55,7 @@ namespace projeto_tcm.Repositorio
             return id;
         }
 
-        public Cadastro ConsultarFuncionario(int id)
+        public FuncionarioModel ConsultarFuncionario(int id)
         {
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM funcionario where id_func = @id_func", cn.ConectarBD());
             cmd.Parameters.Add("@id_func", MySqlDbType.Int16).Value = id;
@@ -64,7 +64,7 @@ namespace projeto_tcm.Repositorio
 
             MySqlDataReader reader = cmd.ExecuteReader();
 
-            Cadastro func = new Cadastro();
+            FuncionarioModel func = new FuncionarioModel();
 
             while (reader.Read())
             {
@@ -86,9 +86,9 @@ namespace projeto_tcm.Repositorio
             return func;
         }
 
-        public List<Cadastro> ListarTodos()
+        public List<FuncionarioModel> ListarTodos()
         {
-            List<Cadastro> funcionarios = new List<Cadastro>();
+            List<FuncionarioModel> funcionarios = new List<FuncionarioModel>();
 
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM funcionario", cn.ConectarBD());
 
@@ -98,7 +98,7 @@ namespace projeto_tcm.Repositorio
 
             while (reader.Read())
             {
-                Cadastro func = new Cadastro();
+                FuncionarioModel func = new FuncionarioModel();
                 func.idCadastro = reader.GetString(reader.GetOrdinal("id_func"));
                 func.nomeCadastro = reader.GetString(reader.GetOrdinal("nome_func"));
                 func.cpfCadastro = reader.GetString(reader.GetOrdinal("CPF_func"));

@@ -1,4 +1,4 @@
-﻿@model projeto_tcm.Models.Cadastro
+﻿@model projeto_tcm.Models.FuncionarioModel
 
 @{
     /**/
@@ -8,7 +8,7 @@
 
 @Styles.Render("~/Content/css")
 
-@using (Html.BeginForm("CadastrarFuncionario", "Cadastro", FormMethod.Post))
+@using (Html.BeginForm("CadastrarFuncionario", "Funcionario", FormMethod.Post))
 {
     @Html.ValidationSummary(true)
     <br />
@@ -97,7 +97,7 @@
 }
 <hr />
 
-@using (Html.BeginForm("ConsultarCadastro", "Cadastro", FormMethod.Get))
+@using (Html.BeginForm("ConsultarCadastro", "Funcionario", FormMethod.Get))
 {
     <div align="center">
         <p> Consultar funcionário</p>
