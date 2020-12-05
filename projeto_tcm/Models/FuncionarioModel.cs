@@ -2,7 +2,7 @@
 
 namespace projeto_tcm.Models
 {
-    public class Cadastro
+    public class FuncionarioModel
     {
         [Display(Name = "ID:  ")]
         public string idCadastro { get; set; }

@@ -1,0 +1,51 @@
+﻿@model List<projeto_tcm.Models.FuncionarioModel>
+
+@{
+
+    ViewBag.Title = "Listagem de cadastros";
+}
+
+@Styles.Render("~/Content/css")
+
+
+@{
+    <div align="center">
+        <p>Listagem de funcionários</p>
+    </div>
+    <div align="left">
+        <a class="nav-link" href="@Url.Action("Index")"><span class="glyphicon glyphicon-chevron-left"> Voltar </span></a>
+    </div>
+    <div class="panel panel-default" align="center">
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th>CPF</th>
+                        <th>TELEFONE</th>
+                        <th>FUNÇÃO</th>
+                        <th>ENDEREÇO</th>
+                        <th>USUARIO</th>
+                        <th>NIVEL DE ACESSO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.idCadastro</td>
+                            <td>@item.nomeCadastro</td>
+                            <td>@item.cpfCadastro</td>
+                            <td>@item.telefoneCadastro</td>
+                            <td>@item.funcaoCadastro</td>
+                            <td>@item.enderecoCadastro</td>
+                            <td>@item.usuarioCadastro</td>
+                            <td>@item.nivelCadastro</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
