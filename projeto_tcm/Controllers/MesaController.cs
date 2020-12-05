@@ -8,25 +8,28 @@ using System.Web.Mvc;
 
 namespace projeto_tcm.Controllers
 {
+    [Route("mesa")]
     public class MesaController : Controller
     {
-        public ActionResult Mesas()
+        public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult ConsultarMesas()
+        public ActionResult ConsultarMesas(int id)
         {
-            return View();
+            Mesaas me = new Mesaas();
+            Mesaa resultado = me.ConsultarMesa(id);
+            return View(resultado);
         }
 
         [HttpPost]
-        public ActionResult CadastrarMesas(Mesaa mesa)
+        public ActionResult CadastrarMesas(Mesaa body)
         {
             Mesaas me = new Mesaas();
-            me.CadastroMesa(mesa);
+            me.CadastroMesa(body);
 
-            return RedirectToAction("ConsultarMesas", mesa);
+            return RedirectToAction("ConsultarMesas", body);
         }
     }
 }

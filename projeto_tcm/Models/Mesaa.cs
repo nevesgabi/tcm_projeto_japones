@@ -1,8 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace projeto_tcm.Models
 {
@@ -10,17 +6,17 @@ namespace projeto_tcm.Models
     {
         [Required(ErrorMessage = "Insira um número de mesa válido!!")]
         [Display(Name = "Número da mesa:  ")]
-        public string mesa { get; set; }
+        public int mesa { get; set; }
 
         [Required(ErrorMessage = "Insira um número de assentos válido!!")]
         [Display(Name = "Quantidade de assentos:  ")]
-        public string assentos { get; set; }
+        public int assentos { get; set; }
 
         [Required(ErrorMessage = "Insira um status válido!!")]
         [Display(Name = "Status:  ")]
         public string statusmesa { get; set; }
 
         [Display(Name = "Id da mesa:  ")]
-        public string idmesa { get; set; }
+        public int idmesa { get; set; }
     }
 }

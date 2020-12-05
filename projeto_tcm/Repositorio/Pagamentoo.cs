@@ -26,5 +26,15 @@ namespace projeto_tcm.Repositorio
             cmd.ExecuteNonQuery();
             cn.DesconectarBD();
         }
+
+        public Pagamento ConsultarPagamento (int id)
+        {
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM Pagamento where id_pag = @id_pag", cn.ConectarBD());
+            cmd.Parameters.Add("@id_pag", MySqlDbType.Int16).Value = id;
+
+            cmd.ExecuteNonQuery();
+
+            return new Pagamento();
+        }
     }
 }

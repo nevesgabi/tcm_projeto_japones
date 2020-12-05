@@ -29,9 +29,14 @@ namespace projeto_tcm.Repositorio
             cn.DesconectarBD();
         }
 
-        public void ConsultarFuncionario(Cadastro cd)
+        public Funcionario ConsultarFuncionario(int id)
         {
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM Mesa where id_func = @id_func", cn.ConectarBD());
+            cmd.Parameters.Add("@id_func", MySqlDbType.Int16).Value = id;
 
+            cmd.ExecuteNonQuery();
+
+            return new Funcionario();
         }
     }
 }

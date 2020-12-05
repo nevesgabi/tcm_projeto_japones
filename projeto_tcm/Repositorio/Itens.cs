@@ -23,5 +23,15 @@ namespace projeto_tcm.Repositorio
             cmd.ExecuteNonQuery();
             cn.DesconectarBD();
         }
+
+        public Item ConsultarItem (int id)
+        {
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM Item where id_item = @id_item", cn.ConectarBD());
+            cmd.Parameters.Add("@id_item", MySqlDbType.Int16).Value = id;
+
+            cmd.ExecuteNonQuery();
+
+            return new Item();
+        }
     }
 }

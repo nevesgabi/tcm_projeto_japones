@@ -8,9 +8,10 @@ using System.Web.Mvc;
 
 namespace projeto_tcm.Controllers
 {
+    [Route("cadastro")]
     public class CadastroController : Controller
     {
-        public ActionResult Cadastro()
+        public ActionResult Index()
         {
             return View();
         }

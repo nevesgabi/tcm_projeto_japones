@@ -25,5 +25,15 @@ namespace projeto_tcm.Repositorio
             cmd.ExecuteNonQuery();
             cn.DesconectarBD();
         }
+
+        public Comanda ConsultaComanda(int id)
+        {
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM Comanda where id_comanda = @id_comanda", cn.ConectarBD());
+            cmd.Parameters.Add("@id_comanda", MySqlDbType.Int16).Value = id;
+
+            cmd.ExecuteNonQuery();
+
+            return new Comanda();
+        }
     }
 }

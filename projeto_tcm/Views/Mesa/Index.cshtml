@@ -1,11 +1,13 @@
 ﻿@model projeto_tcm.Models.Mesaa
 @{
+    /**/
+
     ViewBag.Title = "Mesas";
 }
 
 @Styles.Render("~/Content/css")
 
-@using (Html.BeginForm("CadastrarMesa", "Mesaas", FormMethod.Post))
+@using (Html.BeginForm("CadastrarMesas", "Mesa", FormMethod.Post))
 {
     @Html.ValidationSummary(true)
     <br />
@@ -34,7 +36,7 @@
             </div>
             <div class="col-lg-5"></div>
         </div>
-        <br />       
+        <br />
         <div class="row">
             <div class="col-lg-4"></div>
             <div class="col-lg-2 custom-info text-center">
@@ -51,13 +53,15 @@
     <div align="center">
         <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
     </div>
+}
+<hr />
 
-    <hr />
+<div align="center">
+    <p> Consultar mesa</p>
+</div>
 
-    <div align="center">
-        <p> Consultar mesa</p>
-    </div>
-
+@using (Html.BeginForm("CadastrarMesas", "Mesa", FormMethod.Post))
+{
     <div align="center">
         @Html.LabelFor(m => m.idmesa)
 
@@ -77,10 +81,9 @@
     <br />
     <br />
     <br />
-
-    <div align="right">
-        <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-th-list"> Visualizar todas</span></a>
-    </div>
-
 }
+
+<div align="right">
+    <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-th-list"> Visualizar todas</span></a>
+</div>
 
