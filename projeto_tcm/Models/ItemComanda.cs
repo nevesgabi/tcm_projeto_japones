@@ -24,6 +24,7 @@ namespace projeto_tcm.Models
 
     public class ItemComandaFormatado
     {
+        public int id_itemComanda { get; set; }
         public string nome_item { get; set; }
         public double preco_item { get; set; }
         public int qtd_item { get; set; }

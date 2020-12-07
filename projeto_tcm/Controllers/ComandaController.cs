@@ -60,10 +60,17 @@ namespace projeto_tcm.Controllers
             repo.AdicionarItem(item);
         }
 
+        [HttpDelete]
+        public void DeletarItem(int idItemComanda)
+        {
+            ItemComandaRepositorio repo = new ItemComandaRepositorio();
+            repo.DeletarItem(idItemComanda);
+        }
+
         public ActionResult ListarItensComanda(int idComanda)
         {
             ItemComandaRepositorio repo = new ItemComandaRepositorio();
-            List<ItemComandaFormatado> itens = repo.listarItensComanda(idComanda);
+            List<ItemComandaFormatado> itens = repo.ListarItensComanda(idComanda);
             ItemFormatadoResposta resp = new ItemFormatadoResposta();
             resp.itens = itens;
             resp.total = itens.Sum(x => x.preco_item * x.qtd_item);

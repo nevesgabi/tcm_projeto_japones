@@ -45,6 +45,17 @@
             });
         }
 
+        function excluirItemComanda(id) {
+            $.ajax({
+                url: `/Comanda/DeletarItem?idItemComanda=${id}`,
+                type: 'DELETE',
+                success: function (data) {
+                    obterItens(queryParam('idComanda'));
+                    alert("Item Deletado!");
+                }
+            });
+        }
+
         function queryParam (name) {
             var results = new RegExp('[\?&]' + name + '=([^&#]*)')
                 .exec(window.location.search);

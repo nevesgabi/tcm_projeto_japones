@@ -16,16 +16,18 @@
                         <th>Item</th>
                         <th>Preço</th>
                         <th>Quantidade</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model.itens)
                     {
-                        <tr>
-                            <td>@item.nome_item</td>
-                            <td>@item.preco_item</td>
-                            <td>@item.qtd_item</td>
-                        </tr>
+                    <tr>
+                        <td>@item.nome_item</td>
+                        <td>@item.preco_item</td>
+                        <td>@item.qtd_item</td>
+                        <td><button onclick="excluirItemComanda(@item.id_itemComanda)">DELETAR</button></td>
+                    </tr>
                     }
                 <tr>
                     <td></td>

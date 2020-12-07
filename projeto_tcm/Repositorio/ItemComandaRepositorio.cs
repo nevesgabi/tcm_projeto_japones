@@ -25,9 +25,9 @@ namespace projeto_tcm.Repositorio
             cn.DesconectarBD();
         }
 
-        public List<ItemComandaFormatado> listarItensComanda(int idComanda)
+        public List<ItemComandaFormatado> ListarItensComanda(int idComanda)
         {
-            MySqlCommand cmd = new MySqlCommand(@"SELECT item.nome_item, item.preco_item,  itemComanda.qt_item
+            MySqlCommand cmd = new MySqlCommand(@"SELECT itemComanda.id_item_comanda, item.nome_item, item.preco_item,  itemComanda.qt_item
                                                     FROM itemComanda
                                                     INNER JOIN item ON itemComanda.id_item = item.id_item
                                                     WHERE id_comanda = @idComanda;", cn.ConectarBD());
@@ -43,6 +43,7 @@ namespace projeto_tcm.Repositorio
             while (reader.Read())
             {
                 ItemComandaFormatado it = new ItemComandaFormatado();
+                it.id_itemComanda = reader.GetInt16(reader.GetOrdinal("id_item_comanda"));
                 it.nome_item = reader.GetString(reader.GetOrdinal("nome_item"));
                 it.preco_item = reader.GetDouble(reader.GetOrdinal("preco_item"));
                 it.qtd_item = reader.GetInt16(reader.GetOrdinal("qt_item"));
@@ -52,6 +53,16 @@ namespace projeto_tcm.Repositorio
             cn.DesconectarBD();
 
             return itens;
+        }
+
+        public bool DeletarItem(int id)
+        {
+            MySqlCommand cmd = new MySqlCommand("DELETE FROM itemComanda WHERE id_item_comanda = @id_item_comanda", cn.ConectarBD());
+            cmd.Parameters.Add("@id_item_comanda", MySqlDbType.Int16).Value = id;
+
+            int deletedRows = cmd.ExecuteNonQuery();
+
+            return deletedRows > 0;
         }
     }
 }
