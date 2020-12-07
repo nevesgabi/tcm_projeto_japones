@@ -7,39 +7,43 @@ namespace projeto_tcm.Models
         [Display(Name = "ID:  ")]
         public int idCadastro { get; set; }
 
-        [Required(ErrorMessage = "Insira um telefone válido!")]
+        [Required(ErrorMessage = "Campo obrigatório!")]
+        [RegularExpression(@"[0-9]{8,10}", ErrorMessage = "Insira no minimo 8 números")]
         [Display(Name = "Telefone:  ")]
         public string telefoneCadastro { get; set; }
 
-        [Required(ErrorMessage = "Insira um nome válido!")]
+        [Required(ErrorMessage = "Campo obrigatório!")]
+        [RegularExpression(@"[a-zA-Z]{3,20}", ErrorMessage = "Insira no mínimo 3 letras")]
         [Display(Name = "Nome completo:  ")]
         public string nomeCadastro { get; set; }
 
-        [Required(ErrorMessage = "Insira um endereço válido!")]
+        [Required(ErrorMessage = "Campo obrigatório!")]
+        [RegularExpression(@"[a-zA-Z0-9]{10,40}", ErrorMessage = "Insira no mínimo 3 caracteres")]
         [Display(Name = "Endereço:  ")]
         public string enderecoCadastro { get; set; }
 
-        [Required(ErrorMessage = "Insira uma função válida!")]
+        [Required(ErrorMessage = "Campo obrigatório!")]
+        [RegularExpression(@"[a-zA-Z]{3,20}", ErrorMessage = "Insira no mínimo 3 letras")]
         [Display(Name = "Função:  ")]
         public string funcaoCadastro { get; set; }
 
-        [Required(ErrorMessage = "Insira um usuário válido!")]
+        [Required(ErrorMessage = "Campo obrigatório!")]
+        [RegularExpression(@"[a-zA-Z0-9]{3,20}", ErrorMessage = "Insira no mínimo 3 caracteres")]
         [Display(Name = "Usuário:  ")]
         public string usuarioCadastro { get; set; }
 
-        [Required(ErrorMessage = "Insira um cpf válido!")]
+        [Required(ErrorMessage = "Campo obrigatório!")]
         [Display(Name = "CPF:  ")]
+        [RegularExpression(@"[a-zA-Z0-9]{6,20}", ErrorMessage = "Insira no mínimo 3 caracteres")]
         public string cpfCadastro { get; set; }
 
-        [Required(ErrorMessage = "Insira uma senha válida!")]
+        [Required(ErrorMessage = "Campo obrigatório!")]
         [Display(Name = "Senha:  ")]
+        [RegularExpression(@"[a-zA-Z0-9]{8,20}", ErrorMessage = "Insira no mínimo 8 caracteres")]
         public string senhaCadastro { get; set; }
 
-        [Required(ErrorMessage = "Confira se as duas senhas se igualam!")]
-        [Display(Name = "Confirmar senha:  ")]
-        public string confirmaCadastro { get; set; }
-
-        [Required(ErrorMessage = "Insira um nível de acesso válido!")]
+        [Required(ErrorMessage = "Campo obrigatório!")]
+        [RegularExpression(@"[0-9]{1}", ErrorMessage = "Insira apenas 1 número")]
         [Display(Name = "Nível de acesso:  ")]
         public string nivelCadastro { get; set; }
     }

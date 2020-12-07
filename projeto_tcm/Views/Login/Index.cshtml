@@ -20,7 +20,8 @@
                 </div>
                 <div class="text">
                     @Html.TextBoxFor(m => m.nome_usuario)
-
+                </div>
+                <div>
                     @Html.ValidationMessageFor(model => model.nome_usuario)
                 </div>
                 <div class="form-text-input">
@@ -28,9 +29,10 @@
                 </div>
                 <div class="text">
                     @Html.PasswordFor(m => m.senha)
-
-                    @Html.ValidationMessageFor(model => model.senha)
                 </div>
+                    <div>
+                        @Html.ValidationMessageFor(model => model.senha)
+                    </div>
                 <br />
                 <div class="form-button">
                     <input type="submit"  class="btn btn-danger btn-lg" value="Entrar" />

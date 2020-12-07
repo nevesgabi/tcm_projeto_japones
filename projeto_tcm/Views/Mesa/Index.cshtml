@@ -14,43 +14,28 @@
     <div align="center">
         <p> Cadastrar mesa</p>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-2 custom-info text-center">
+    <div align="center">
+            <div class="alinhamento">
                 @Html.LabelFor(m => m.mesa)
-            </div>
-            <div class="col-lg-1">
                 @Html.EditorFor(m => m.mesa)
-
                 @Html.ValidationMessageFor(model => model.mesa)
-
             </div>
-            <div class="col-lg-5"></div>
-        </div>
-        <br />
-        <div class="row">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-2 custom-info text-center">
+            <div class="alinhamento">
                 @Html.LabelFor(m => m.assentos)
-            </div>
-            <div class="col-lg-1">
+
                 @Html.EditorFor(m => m.assentos)
+
+                @Html.ValidationMessageFor(model => model.assentos)
             </div>
-            <div class="col-lg-5"></div>
-        </div>
-        <br />
-        <div class="row">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-2 custom-info text-center">
+            <div class="alinhamento">
                 @Html.LabelFor(m => m.statusmesa)
-            </div>
-            <div class="col-lg-1">
+
                 @Html.EditorFor(m => m.statusmesa)
+
+                @Html.ValidationMessageFor(model => model.statusmesa)
             </div>
-            <div class="col-lg-5"></div>
         </div>
-    </div>
+
     <br />
 
     <div align="center">

@@ -7,12 +7,13 @@ namespace projeto_tcm.Models
         public int cad_usuario { get; set; }
 
         [Required(ErrorMessage = "Insira um usuário válido!!")]
-        [Range(10, 20)]
-        [Display(Name = "Usuário   ")]
+        [RegularExpression(@"[a-zA-Z]{3,20}", ErrorMessage = "Insira no mínimo 3 caracteres")]
+        [Display(Name = "Usuário")]
         public string nome_usuario { get; set; }
 
         [Required(ErrorMessage = "Insira uma senha válida!!")]
-        [Display(Name = "Senha   ")]
+        [RegularExpression(@"[a-zA-Z0-9]{3,20}", ErrorMessage = "Insira no mínimo 3 caracteres")]
+        [Display(Name = "Senha")]
         public string senha { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace projeto_tcm.Models
         public string horarioComanda { get; set; }
 
         [Required(ErrorMessage = "Insira uma mesa válida!")]
-        [Display(Name = "Número da mesa:  ")]
+        [Display(Name = "Mesa:  ")]
         public int mesaComanda { get; set; }
 
         [Required(ErrorMessage = "Insira um item válido!")]
@@ -37,6 +37,7 @@ namespace projeto_tcm.Models
         public string totalComanda { get; set; }
 
         [Required(ErrorMessage = "Insira um status!")]
+        [RegularExpression(@"[a-zA-Z]{3,20}", ErrorMessage = "Insira no mínimo 3 caracteres")]
         [Display(Name = "Status:  ")]
         public string statusComanda { get; set; }
     }

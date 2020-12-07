@@ -22,15 +22,17 @@
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.nomeCadastro)
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     @Html.EditorFor(m => m.nomeCadastro)
+                    @Html.ValidationMessageFor(model => model.nomeCadastro)
                 </div>
                 <div class="col-lg-4"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.telefoneCadastro)
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     @Html.EditorFor(m => m.telefoneCadastro)
+                    @Html.ValidationMessageFor(model => model.telefoneCadastro)
                 </div>
                 <div class="col-lg-2"></div>
             </div>
@@ -40,15 +42,17 @@
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.funcaoCadastro)
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     @Html.EditorFor(m => m.funcaoCadastro)
+                    @Html.ValidationMessageFor(model => model.funcaoCadastro)
                 </div>
                 <div class="col-lg-4"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.enderecoCadastro)
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     @Html.EditorFor(m => m.enderecoCadastro)
+                    @Html.ValidationMessageFor(model => model.enderecoCadastro)
                 </div>
                 <div class="col-lg-2"></div>
             </div>
@@ -58,15 +62,17 @@
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.cpfCadastro)
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     @Html.EditorFor(m => m.cpfCadastro)
+                    @Html.ValidationMessageFor(model => model.cpfCadastro)
                 </div>
                 <div class="col-lg-4"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.nivelCadastro)
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     @Html.EditorFor(m => m.nivelCadastro)
+                    @Html.ValidationMessageFor(model => model.nivelCadastro)
                 </div>
                 <div class="col-lg-2"></div>
             </div>
@@ -76,15 +82,17 @@
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.usuarioCadastro)
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     @Html.EditorFor(m => m.usuarioCadastro)
+                    @Html.ValidationMessageFor(model => model.usuarioCadastro)
                 </div>
                 <div class="col-lg-4"></div>
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.senhaCadastro)
                 </div>
-                <div class="col-lg-1">
-                    @Html.EditorFor(m => m.senhaCadastro)
+                <div class="col-lg-2">
+                    @Html.PasswordFor(m => m.senhaCadastro)
+                    @Html.ValidationMessageFor(model => model.senhaCadastro)
                 </div>
                 <div class="col-lg-2"></div>
             </div>
