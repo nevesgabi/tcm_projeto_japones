@@ -20,10 +20,6 @@ namespace projeto_tcm.Models
         [Display(Name = "Item:  ")]
         public int itemComanda { get; set; }
 
-        [Required(ErrorMessage = "Insira uma quantidade válida!")]
-        [Display(Name = "Quantidade:  ")]
-        public int quantidadeComanda { get; set; }
-
         [Required(ErrorMessage = "Insira um funcionário válido!")]
         [Display(Name = "Funcionário responsável:  ")]
         public int funcionarioComanda { get; set; }

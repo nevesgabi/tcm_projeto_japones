@@ -186,6 +186,7 @@
     <Compile Include="Models\FuncionarioModel.cs" />
     <Compile Include="Models\Comanda.cs" />
     <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemComanda.cs" />
     <Compile Include="Models\Mesaa.cs" />
     <Compile Include="Models\Pagamento.cs" />
     <Compile Include="Models\UserLogin.cs" />
@@ -193,6 +194,7 @@
     <Compile Include="Repositorio\Comandas.cs" />
     <Compile Include="Repositorio\FuncionarioRepositorio.cs" />
     <Compile Include="Repositorio\Conexao.cs" />
+    <Compile Include="Repositorio\ItemComandaRepositorio.cs" />
     <Compile Include="Repositorio\Itens.cs" />
     <Compile Include="Repositorio\LoginRepositorio.cs" />
     <Compile Include="Repositorio\Mesaas.cs" />
@@ -255,6 +257,8 @@
     <Content Include="Views\Comanda\ListarTodasComandas.cshtml" />
     <Content Include="Views\Mesa\ListarTodasMesas.cshtml" />
     <Content Include="Views\Pagamento\ListarTodosPagamentos.cshtml" />
+    <Content Include="Views\Comanda\AdicionarItemComanda.cshtml" />
+    <Content Include="Views\Comanda\ListaDeItensComanda.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -47,5 +47,28 @@ namespace projeto_tcm.Controllers
             repositorio.DeletarComanda(idComanda);
             return RedirectToAction("Comanda");
         }
+
+        public ActionResult AdicionarComandaView()
+        {
+            return PartialView("AdicionarItemComanda");
+        }
+
+        [HttpPost]
+        public void AdicionarItem(ItemComanda item)
+        {
+            ItemComandaRepositorio repo = new ItemComandaRepositorio();
+            repo.AdicionarItem(item);
+        }
+
+        public ActionResult ListarItensComanda(int idComanda)
+        {
+            ItemComandaRepositorio repo = new ItemComandaRepositorio();
+            List<ItemComandaFormatado> itens = repo.listarItensComanda(idComanda);
+            ItemFormatadoResposta resp = new ItemFormatadoResposta();
+            resp.itens = itens;
+            resp.total = itens.Sum(x => x.preco_item * x.qtd_item);
+
+            return PartialView("ListaDeItensComanda", resp);
+        }
     }
 }

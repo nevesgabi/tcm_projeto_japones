@@ -5,7 +5,7 @@ namespace projeto_tcm.Repositorio
 {
     public class Conexao
     {
-        MySqlConnection cn = new MySqlConnection("Server=192.168.0.7;Database=tomoe_sushi;user=root; pwd=Trdaejk789");
+        MySqlConnection cn = new MySqlConnection("Server=192.168.0.9;Database=tomoe_sushi;user=root; pwd=Trdaejk789");
         public static string msg;
 
         public MySqlConnection ConectarBD()

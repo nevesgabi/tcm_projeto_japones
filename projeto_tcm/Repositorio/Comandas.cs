@@ -18,7 +18,6 @@ namespace projeto_tcm.Repositorio
             MySqlCommand cmd = new MySqlCommand("INSERT INTO Comanda(data_comanda, horario_comanda, qt_item, id_mesa, id_func, status_comanda) VALUES (@data_comanda, @horario_comanda, @qt_item, @id_mesa, @id_func, @status_comanda)", cn.ConectarBD());
             cmd.Parameters.Add("@data_comanda", MySqlDbType.VarChar).Value = dto.dataComanda;
             cmd.Parameters.Add("@horario_comanda", MySqlDbType.VarChar).Value = dto.horarioComanda;
-            cmd.Parameters.Add("@qt_item", MySqlDbType.Int16).Value = dto.quantidadeComanda;
             cmd.Parameters.Add("@id_mesa", MySqlDbType.Int16).Value = dto.mesaComanda;
             cmd.Parameters.Add("@id_func", MySqlDbType.Int16).Value = dto.funcionarioComanda;
             cmd.Parameters.Add("@status_comanda", MySqlDbType.VarChar).Value = dto.statusComanda;
@@ -50,7 +49,6 @@ namespace projeto_tcm.Repositorio
                 coman.idComanda = reader.GetInt16(reader.GetOrdinal("id_comanda"));
                 coman.dataComanda = reader.GetString(reader.GetOrdinal("data_comanda"));
                 coman.horarioComanda = reader.GetString(reader.GetOrdinal("horario_comanda"));
-                coman.quantidadeComanda = reader.GetInt16(reader.GetOrdinal("qt_item"));
                 coman.mesaComanda = reader.GetInt16(reader.GetOrdinal("id_mesa"));
                 coman.funcionarioComanda = reader.GetInt16(reader.GetOrdinal("id_func"));
                 coman.statusComanda = reader.GetString(reader.GetOrdinal("status_comanda"));
@@ -79,7 +77,6 @@ namespace projeto_tcm.Repositorio
                 coman.idComanda = reader.GetInt16(reader.GetOrdinal("id_comanda"));
                 coman.dataComanda = reader.GetString(reader.GetOrdinal("data_comanda"));
                 coman.horarioComanda = reader.GetString(reader.GetOrdinal("horario_comanda"));
-                coman.quantidadeComanda = reader.GetInt16(reader.GetOrdinal("qt_item"));
                 coman.mesaComanda = reader.GetInt16(reader.GetOrdinal("id_mesa"));
                 coman.funcionarioComanda = reader.GetInt16(reader.GetOrdinal("id_func"));
                 coman.statusComanda = reader.GetString(reader.GetOrdinal("status_comanda"));

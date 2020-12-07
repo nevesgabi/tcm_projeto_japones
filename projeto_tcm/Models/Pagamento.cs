@@ -22,7 +22,7 @@ namespace projeto_tcm.Models
         public string tipoPag { get; set; }
 
         [Required(ErrorMessage = "Insira um CPF válido!")]
-        [RegularExpression(@"{11}", ErrorMessage = "Insira 11 digitos")]
+        [RegularExpression(@"[0-9]{11}", ErrorMessage = "Insira 11 digitos")]
         [Display(Name = "CPF:  ")]
         public string cpfPagamento { get; set; }
 
@@ -35,7 +35,7 @@ namespace projeto_tcm.Models
         public int idPagamento { get; set; }
 
         [Required(ErrorMessage = "Insira uma comanda válida!")]
-        [RegularExpression(@"{1,5}", ErrorMessage = "Insira apenas números")]
+        [RegularExpression(@"[0-9]{1,5}", ErrorMessage = "Insira apenas números")]
         [Display(Name = "Comanda:  ")]
         public int comandaPagamento { get; set; }
     }

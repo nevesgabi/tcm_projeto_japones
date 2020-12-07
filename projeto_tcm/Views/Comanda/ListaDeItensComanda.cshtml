@@ -1,0 +1,39 @@
+﻿@model projeto_tcm.Models.ItemFormatadoResposta
+
+@Styles.Render("~/Content/css")
+
+
+@{
+    <div align="center">
+        <p>Itens da comanda</p>
+    </div>
+    <br />
+    <div class="panel panel-default" align="center">
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.itens)
+                    {
+                        <tr>
+                            <td>@item.nome_item</td>
+                            <td>@item.preco_item</td>
+                            <td>@item.qtd_item</td>
+                        </tr>
+                    }
+                <tr>
+                    <td></td>
+                    <td>Total</td>
+                    <td>@Model.total</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

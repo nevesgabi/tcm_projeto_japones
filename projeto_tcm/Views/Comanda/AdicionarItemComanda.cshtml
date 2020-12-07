@@ -1,0 +1,26 @@
+﻿@model projeto_tcm.Models.ItemComanda
+@Styles.Render("~/Content/css")
+
+@using (Html.BeginForm("AdicionarItem", "Comanda", FormMethod.Post, new { @id = "adicionarItemForm" }))
+{
+    @Html.ValidationSummary(true)
+    <div class="row">
+        <div class="col-md-2 custom-info text-center">
+            @Html.LabelFor(m => m.id_item)
+        </div>
+        <div class="col-md-3">
+            @Html.EditorFor(m => m.id_item)
+            @Html.ValidationMessageFor(model => model.id_item)
+        </div>
+        <div class="col-md-2 custom-info text-center">
+            @Html.LabelFor(m => m.qt_item)
+        </div>
+        <div class="col-md-3">
+            @Html.EditorFor(m => m.qt_item)
+            @Html.ValidationMessageFor(model => model.qt_item)
+        </div>
+        <div class="col-md-2">
+            <button type="button" onclick="adicionarItemAComanda()" class="btn btn-success"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
+        </div>
+    </div>
+}
