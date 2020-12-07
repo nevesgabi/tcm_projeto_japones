@@ -22,6 +22,9 @@
             </div>
             <div class="col-lg-1">
                 @Html.EditorFor(m => m.mesa)
+
+                @Html.ValidationMessageFor(model => model.mesa)
+
             </div>
             <div class="col-lg-5"></div>
         </div>
@@ -51,28 +54,27 @@
     <br />
 
     <div align="center">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
+        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
     </div>
 }
 <hr />
 
-<div align="center">
-    <p> Consultar mesa</p>
-</div>
-
-@using (Html.BeginForm("CadastrarMesas", "Mesa", FormMethod.Post))
+@using (Html.BeginForm("ConsultarMesas", "Mesa", FormMethod.Get))
 {
     <div align="center">
-        @Html.LabelFor(m => m.idmesa)
+        <p> Consultar mesas</p>
+    </div>
 
-        @Html.EditorFor(m => m.idmesa)
+    <div align="center">
+        <label for="idMesa">ID:</label>
+        <input id="idMesa" type="tel" name="idMesa" />
     </div>
 
     <br />
 
     <div align="center">
-        <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-remove"> Excluir </span></a>
-        <a class="btn btn-danger" href="@Url.Action("ConsultarMesas")"><span class="glyphicon glyphicon-ok"> Consultar </span></a>
+        <button type="submit" class="btn btn-danger" formaction=@Url.Action("DeletarMesa") formmethod="post"><span class="glyphicon glyphicon-remove"> Excluir</span></button>
+        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"> Consultar</span></button>
     </div>
 
     <br />
@@ -83,7 +85,7 @@
     <br />
 }
 
-<div align="right">
-    <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-th-list"> Visualizar todas</span></a>
-</div>
+    <div align="right">
+        <a class="btn btn-warning" href="@Url.Action("ListarTodasMesas")"><span class="glyphicon glyphicon-th-list"></span>  Visualizar todas</a>
+    </div>
 

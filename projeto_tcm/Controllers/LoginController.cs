@@ -1,8 +1,5 @@
 ﻿using projeto_tcm.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using projeto_tcm.Repositorio;
 using System.Web.Mvc;
 using System.Web.Security;
 
@@ -15,10 +12,14 @@ namespace projeto_tcm.Controllers
             return View();
         }
 
-        [HttpPost]
+
+    [HttpPost]
         public ActionResult VerificarUsuario(UserLogin u)
         {
-            if (u.nome_usuario != null && u.senha != null)
+            LoginRepositorio repo = new LoginRepositorio();
+            UserLogin resultado = repo.TestarUsuario(u);
+
+            if (resultado.nome_usuario != null && resultado.senha != null)
             {
                 FormsAuthentication.SetAuthCookie(u.nome_usuario, false);
                 Session["usuario"] = u.nome_usuario.ToString();
@@ -33,5 +34,12 @@ namespace projeto_tcm.Controllers
             }
             return View();
         }
+       
+        public ActionResult Logout()
+        {
+            Session["usuario"] = null;
+            return RedirectToAction("Index", "Login");
+        }
+
+        }
     }
-}

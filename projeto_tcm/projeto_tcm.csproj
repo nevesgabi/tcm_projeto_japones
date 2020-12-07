@@ -194,6 +194,7 @@
     <Compile Include="Repositorio\FuncionarioRepositorio.cs" />
     <Compile Include="Repositorio\Conexao.cs" />
     <Compile Include="Repositorio\Itens.cs" />
+    <Compile Include="Repositorio\LoginRepositorio.cs" />
     <Compile Include="Repositorio\Mesaas.cs" />
     <Compile Include="Repositorio\Pagamentoo.cs" />
   </ItemGroup>
@@ -202,11 +203,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\imagens\fundo.png" />
-    <Content Include="Content\imagens\fundo2.png" />
-    <Content Include="Content\imagens\fundo3.jpg" />
+    <Content Include="Content\imagens\aa.png" />
     <Content Include="Content\imagens\fundo4.jpg" />
-    <Content Include="Content\imagens\logo da empresa definida branca .png" />
     <Content Include="Content\imagens\logo.png" />
     <Content Include="Content\imagens\logoa.png" />
     <Content Include="Content\imagens\logo_lateral.png" />
@@ -253,6 +251,10 @@
     <Content Include="Views\Mesa\ConsultarMesas.cshtml" />
     <Content Include="Views\Pagamento\ConsultarPagamento.cshtml" />
     <Content Include="Views\Funcionario\ListarTodos.cshtml" />
+    <Content Include="Views\Item\ListaTodosItens.cshtml" />
+    <Content Include="Views\Comanda\ListarTodasComandas.cshtml" />
+    <Content Include="Views\Mesa\ListarTodasMesas.cshtml" />
+    <Content Include="Views\Pagamento\ListarTodosPagamentos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

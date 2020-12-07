@@ -92,7 +92,7 @@
     </div>
     <br />
     <div align="center">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
+        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
     </div>
 }
 <hr />
@@ -110,8 +110,8 @@
     <br />
 
     <div align="center">
-        <button type="submit" class="btn btn-danger" formaction=@Url.Action("DeletarCadastro") formmethod="post"><span class="glyphicon glyphicon-remov">Excluir</span></button>
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok">Consultar</span></button>
+        <button type="submit" class="btn btn-danger" formaction=@Url.Action("DeletarCadastro") formmethod="post"><span class="glyphicon glyphicon-remove"> Excluir</span></button>
+        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"> Consultar</span></button>
     </div>
 }
 
@@ -122,5 +122,5 @@
 <br />
 
 <div align="right">
-    <input type="button" class="btn btn-danger" value="Visualizar todos" onclick="window.location= '@Url.Action("ListarTodos")'" />
+    <a class="btn btn-warning" href="@Url.Action("ListarTodos")"><span class="glyphicon glyphicon-th-list"></span>  Visualizar todos</a>
 </div>

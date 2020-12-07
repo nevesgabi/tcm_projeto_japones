@@ -1,0 +1,51 @@
+﻿@model List<projeto_tcm.Models.Comanda>
+
+@{
+
+    ViewBag.Title = "Listagem de comandas";
+}
+
+@Styles.Render("~/Content/css")
+
+
+@{
+    <br />
+    <div align="left">
+        <a class="nav-link" href="@Url.Action("Comanda")"><span class="glyphicon glyphicon-chevron-left"> Voltar </span></a>
+    </div>
+    <div align="center">
+        <p>Listagem de comandas</p>
+    </div>
+    <br />
+    <div class="panel panel-default" align="center">
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Quantidade do item</th>
+                        <th>Mesa</th>
+                        <th>Funcionário</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.idComanda</td>
+                            <td>@item.dataComanda</td>
+                            <td>@item.horarioComanda</td>
+                            <td>@item.quantidadeComanda</td>
+                            <td>@item.mesaComanda</td>
+                            <td>@item.funcionarioComanda</td>
+                            <td>@item.statusComanda</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

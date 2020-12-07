@@ -16,20 +16,36 @@ namespace projeto_tcm.Controllers
             return View();
         }
 
-        public ActionResult ConsultarMesas(int id)
+        public ActionResult ConsultarMesas(int idMesa)
         {
-            Mesaas me = new Mesaas();
-            Mesaa resultado = me.ConsultarMesa(id);
-            return View(resultado);
+            Mesaas repositorio = new Mesaas();
+            Mesaa mesa = repositorio.ConsultarMesas(idMesa);
+            return View(mesa);
         }
 
         [HttpPost]
         public ActionResult CadastrarMesas(Mesaa body)
         {
-            Mesaas me = new Mesaas();
-            me.CadastroMesa(body);
+            Mesaas repositorio = new Mesaas();
+            long id = repositorio.CadastroMesa(body);
 
-            return RedirectToAction("ConsultarMesas", body);
+            return RedirectToAction("ConsultarMesas", new { idMesa = id });
+        }
+
+        public ActionResult ListarTodasMesas()
+        {
+            Mesaas repositorio = new Mesaas();
+            List<Mesaa> mesas = repositorio.ListarTodasMesas();
+
+            return View(mesas);
+        }
+
+        [HttpPost]
+        public ActionResult DeletarMesa(int idMesa)
+        {
+            Mesaas repositorio = new Mesaas();
+            repositorio.DeletarMesa(idMesa);
+            return RedirectToAction("Index");
         }
     }
 }

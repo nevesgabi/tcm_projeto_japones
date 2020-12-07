@@ -35,8 +35,8 @@ namespace projeto_tcm.Repositorio
                     @senha_func, 
                     @nivel_acesso_func)", cn.ConectarBD());
             cmd.Parameters.Add("@nome_func", MySqlDbType.VarChar).Value = dto.nomeCadastro;
-            cmd.Parameters.Add("@CPF_func", MySqlDbType.Int16).Value = dto.cpfCadastro;
-            cmd.Parameters.Add("@tel_func", MySqlDbType.Int16).Value = dto.telefoneCadastro;
+            cmd.Parameters.Add("@CPF_func", MySqlDbType.VarChar).Value = dto.cpfCadastro;
+            cmd.Parameters.Add("@tel_func", MySqlDbType.VarChar).Value = dto.telefoneCadastro;
             cmd.Parameters.Add("@funcao_func", MySqlDbType.VarChar).Value = dto.funcaoCadastro;
             cmd.Parameters.Add("@endereco_func", MySqlDbType.VarChar).Value = dto.enderecoCadastro;
             cmd.Parameters.Add("@usuario_func", MySqlDbType.VarChar).Value = dto.usuarioCadastro;
@@ -68,7 +68,7 @@ namespace projeto_tcm.Repositorio
 
             while (reader.Read())
             {
-                func.idCadastro = reader.GetString(reader.GetOrdinal("id_func"));
+                func.idCadastro = reader.GetInt16(reader.GetOrdinal("id_func"));
                 func.nomeCadastro = reader.GetString(reader.GetOrdinal("nome_func"));
                 func.cpfCadastro = reader.GetString(reader.GetOrdinal("CPF_func"));
                 func.telefoneCadastro = reader.GetString(reader.GetOrdinal("tel_func"));
@@ -99,7 +99,7 @@ namespace projeto_tcm.Repositorio
             while (reader.Read())
             {
                 FuncionarioModel func = new FuncionarioModel();
-                func.idCadastro = reader.GetString(reader.GetOrdinal("id_func"));
+                func.idCadastro = reader.GetInt16(reader.GetOrdinal("id_func"));
                 func.nomeCadastro = reader.GetString(reader.GetOrdinal("nome_func"));
                 func.cpfCadastro = reader.GetString(reader.GetOrdinal("CPF_func"));
                 func.telefoneCadastro = reader.GetString(reader.GetOrdinal("tel_func"));

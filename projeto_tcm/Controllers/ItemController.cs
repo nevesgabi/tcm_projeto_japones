@@ -15,19 +15,37 @@ namespace projeto_tcm.Controllers
             return View();
         }
 
-        public ActionResult ConsultarItem()
+        public ActionResult ConsultarItem(int idItem)
         {
-            return View();
+            Itens repositorio = new Itens();
+            Item item = repositorio.ConsultarItem(idItem);
+            return View(item);
+        }
+
+        public ActionResult ListaTodosItens()
+        {
+            Itens repositorio = new Itens();
+            List<Item> itens = repositorio.ListaTodosItens();
+
+            return View(itens);
         }
 
         [HttpPost]
         public ActionResult CadastrarItem(Item item)
         {
 
-            Itens it = new Itens();
-            it.CadastroItem(item);
+            Itens repositorio = new Itens();
+            long id = repositorio.CadastroItem(item);
 
-            return RedirectToAction("ConsultarItem", item);
+            return RedirectToAction("ConsultarItem", new { idItem = id });
+        }
+
+        [HttpPost]
+        public ActionResult DeletarItem(int idItem)
+        {
+            Itens repositorio = new Itens();
+            repositorio.DeletarItem(idItem);
+            return RedirectToAction("Item");
         }
     }
 }

@@ -1,0 +1,47 @@
+﻿@model List<projeto_tcm.Models.Item>
+
+@{
+
+    ViewBag.Title = "Listagem de itens";
+}
+
+@Styles.Render("~/Content/css")
+
+
+@{
+    <br/>
+    <div align="left">
+        <a class="nav-link" href="@Url.Action("Item")"><span class="glyphicon glyphicon-chevron-left"> Voltar </span></a>
+    </div>
+    <div align="center">
+        <p>Listagem de itens</p>
+    </div>
+    <br/>
+    <div class="panel panel-default" align="center">
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Descrição</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.IdItem</td>
+                            <td>@item.NomeItem</td>
+                            <td>@item.PrecoItem</td>
+                            <td>@item.DescItem</td>
+                            <td>@item.CategoriaItem</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

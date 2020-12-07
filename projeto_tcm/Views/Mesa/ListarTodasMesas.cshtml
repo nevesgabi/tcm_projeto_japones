@@ -1,0 +1,45 @@
+﻿@model List<projeto_tcm.Models.Mesaa>
+
+@{
+
+    ViewBag.Title = "Listagem de mesas";
+}
+
+@Styles.Render("~/Content/css")
+
+
+@{
+    <br/>
+    <div align="left">
+        <a class="nav-link" href="@Url.Action("Index")"><span class="glyphicon glyphicon-chevron-left"> Voltar </span></a>
+    </div>
+    <div align="center">
+        <p>Listagem de mesas</p>
+    </div>
+    <br />
+    <div class="panel panel-default" align="center">
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Número da mesa</th>
+                        <th>Número de assentos</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.idmesa</td>
+                            <td>@item.mesa</td>
+                            <td>@item.assentos</td>
+                            <td>@item.statusmesa</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

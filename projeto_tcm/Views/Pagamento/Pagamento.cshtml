@@ -43,10 +43,10 @@
                 </div>
                 <div class="col-lg-2"></div>
                 <div class="col-lg-1">
-                    @Html.LabelFor(m => m.taxaPagamento)
+                    @Html.LabelFor(m => m.statusPagamento)
                 </div>
                 <div class="col-lg-1">
-                    @Html.EditorFor(m => m.taxaPagamento)
+                    @Html.EditorFor(m => m.statusPagamento)
                 </div>
                 <div class="col-lg-2"></div>
             </div>
@@ -68,44 +68,47 @@
                 </div>
                 <div class="col-lg-2"></div>
             </div>
+            <br/>
             <div align="center">
-                @Html.LabelFor(m => m.statusPagamento)
-                @Html.EditorFor(m => m.statusPagamento)
+                @Html.LabelFor(m => m.tipoPag)
+
+                @Html.EditorFor(m => m.tipoPag)
             </div>
+            <br/>
         </div>
 
     </div>
     <div align="center">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar </span></button>
+        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"> Adicionar </span></button>
     </div>
-
+}
     <hr />
 
-    <div align="center">
-        <p> Consultar pagamento</p>
-    </div>
+    @using (Html.BeginForm("ConsultarPagamento", "Pagamento", FormMethod.Get))
+    {
+        <div align="center">
+            <p> Consultar Pgamento</p>
+        </div>
 
-    <div align="center">
-        @Html.LabelFor(m => m.idPagamento)
+        <div align="center">
+            <label for="idPagamento">ID:</label>
+            <input id="idPagamento" type="tel" name="idPagamento" />
+        </div>
+        <br />
 
-        @Html.EditorFor(m => m.idPagamento)
-    </div>
+        <div align="center">
+            <button type="submit" class="btn btn-danger" formaction=@Url.Action("DeletarPagamento") formmethod="post"><span class="glyphicon glyphicon-remove"> Excluir</span></button>
+            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"> Consultar</span></button>
+        </div>
 
-    <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-    <div align="center">
-        <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-remove"> Excluir </span></a>
-        <a class="btn btn-danger" href="@Url.Action("ConsultarPagamento")"><span class="glyphicon glyphicon-ok"> Consultar </span></a>
-    </div>
+        <div align="right">
+            <a class="btn btn-warning" href="@Url.Action("ListarTodosPagamentos")"><span class="glyphicon glyphicon-th-list"></span>  Visualizar todos</a>
+        </div>
 
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <div align="right">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-th-list"> Visualizar todos</span></button>
-    </div>
-
-}
+    }

@@ -15,19 +15,37 @@ namespace projeto_tcm.Controllers
             return View();
         }
 
-        public ActionResult ConsultarPagamento()
+        public ActionResult ConsultarPagamento(int idPagamento)
         {
-            return View();
+            Pagamentoo repositorio = new Pagamentoo();
+            Pagamento pagamento = repositorio.ConsultarPagamento(idPagamento);
+            return View(pagamento);
         }
 
         [HttpPost]
         public ActionResult CadastrarPagamento(Pagamento pagamento)
         {
 
-            Pagamentoo pg = new Pagamentoo();
-            pg.CadastroPagamento(pagamento);
+            Pagamentoo repositorio = new Pagamentoo();
+            long id = repositorio.CadastroPagamento(pagamento);
 
-            return RedirectToAction("ConsultarPagamento", pagamento);
+            return RedirectToAction("ConsultarPagamento", new { idPagamento = id });
+        }
+
+        [HttpPost]
+        public ActionResult DeletarPagamento(int idPagamento)
+        {
+            Pagamentoo repositorio = new Pagamentoo();
+            repositorio.DeletarPagamento(idPagamento);
+            return RedirectToAction("pagamento");
+        }
+
+        public ActionResult ListarTodosPagamentos()
+        {
+            Pagamentoo repositorio = new Pagamentoo();
+            List<Pagamento> pagamentos = repositorio.ListarTodosPagamentos();
+
+            return View(pagamentos);
         }
     }
 }

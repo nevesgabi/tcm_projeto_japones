@@ -14,30 +14,30 @@ namespace projeto_tcm.Models
 
         [Required(ErrorMessage = "Insira uma mesa válida!")]
         [Display(Name = "Número da mesa:  ")]
-        public string mesaComanda { get; set; }
+        public int mesaComanda { get; set; }
 
         [Required(ErrorMessage = "Insira um item válido!")]
         [Display(Name = "Item:  ")]
-        public string itemComanda { get; set; }
+        public int itemComanda { get; set; }
 
         [Required(ErrorMessage = "Insira uma quantidade válida!")]
         [Display(Name = "Quantidade:  ")]
-        public string quantidadeComanda { get; set; }
+        public int quantidadeComanda { get; set; }
 
         [Required(ErrorMessage = "Insira um funcionário válido!")]
         [Display(Name = "Funcionário responsável:  ")]
-        public string funcionarioComanda { get; set; }
+        public int funcionarioComanda { get; set; }
 
         [Required(ErrorMessage = "Insira um código de comanda válido!")]
         [Display(Name = "ID:  ")]
-        public string idComanda { get; set; }
+        public int idComanda { get; set; }
 
         [Required(ErrorMessage = "Insira um total!")]
         [Display(Name = "Total:  ")]
         public string totalComanda { get; set; }
 
-        [Required(ErrorMessage = "Insira um total!")]
-        [Display(Name = "Total:  ")]
+        [Required(ErrorMessage = "Insira um status!")]
+        [Display(Name = "Status:  ")]
         public string statusComanda { get; set; }
     }
 }

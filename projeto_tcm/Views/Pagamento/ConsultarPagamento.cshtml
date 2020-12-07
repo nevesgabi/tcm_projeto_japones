@@ -59,10 +59,10 @@
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-1">
-                    @Html.LabelFor(m => m.taxaPagamento)
+                    @Html.LabelFor(m => m.tipoPag)
                 </div>
                 <div class="col-lg-1">
-                    @Html.EditorFor(m => m.taxaPagamento)
+                    @Html.EditorFor(m => m.tipoPag)
                 </div>
                 <div class="col-lg-4"></div>
                 <div class="col-lg-1">
@@ -73,11 +73,23 @@
                 </div>
                 <div class="col-lg-2"></div>
             </div>
-            <br/>
-            <div align="center">
-                @Html.LabelFor(m => m.trocoPagamento)
-
-                @Html.EditorFor(m => m.trocoPagamento)
+            <br />
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-1">
+                    @Html.LabelFor(m => m.statusPagamento)
+                </div>
+                <div class="col-lg-1">
+                    @Html.EditorFor(m => m.statusPagamento)
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-1">
+                    @Html.LabelFor(m => m.trocoPagamento)
+                </div>
+                <div class="col-lg-1">
+                    @Html.EditorFor(m => m.trocoPagamento)
+                </div>
+                <div class="col-lg-2"></div>
             </div>
         </div>
     </div>

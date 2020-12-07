@@ -21,6 +21,6 @@ namespace projeto_tcm.Models
         public string CategoriaItem { get; set; }
 
         [Display(Name = "ID:  ")]
-        public string IdItem { get; set; }
+        public int IdItem { get; set; }
     }
 }

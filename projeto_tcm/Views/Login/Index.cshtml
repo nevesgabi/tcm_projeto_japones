@@ -20,24 +20,22 @@
                 </div>
                 <div class="text">
                     @Html.TextBoxFor(m => m.nome_usuario)
-                </div>
-                <div>
-                    @Html.ValidationMessageFor(m => m.nome_usuario, "", new { @class = "text-danger" })
+
+                    @Html.ValidationMessageFor(model => model.nome_usuario)
                 </div>
                 <div class="form-text-input">
                     @Html.LabelFor(m => m.senha)
                 </div>
                 <div class="text">
                     @Html.PasswordFor(m => m.senha)
+
+                    @Html.ValidationMessageFor(model => model.senha)
                 </div>
-                    <div>
-                        @Html.ValidationMessageFor(m => m.senha, "", new { @class = "text-danger" })
-                    </div>
-                    <br />
-                    <div class="form-button">
-                        <button type="submit" class="btn btn-danger btn-lg">Login</button>
-                    </div>
+                <br />
+                <div class="form-button">
+                    <input type="submit"  class="btn btn-danger btn-lg" value="Entrar" />
                 </div>
             </div>
+        </div>
     </fieldset>
 }

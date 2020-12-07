@@ -10,7 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
-    <br />
+    <br/>
     <div align="left">
         <a class="nav-link" href="@Url.Action("Comanda")"><span class="glyphicon glyphicon-chevron-left"> voltar </span></a>
     </div>
@@ -74,9 +74,23 @@
             <div class="col-lg-3"></div>
         </div>
         <br />
-        <div align="center">
-            @Html.LabelFor(m => m.quantidadeComanda)
-            @Html.EditorFor(m => m.quantidadeComanda)
+        <div class="row">
+
+            <div class="col-lg-3"></div>
+            <div class="col-lg-1 custom-info text-center">
+                @Html.LabelFor(m => m.quantidadeComanda)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.quantidadeComanda)
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-1 custom-info text-center">
+                @Html.LabelFor(m => m.statusComanda)
+            </div>
+            <div class="col-lg-1">
+                @Html.EditorFor(m => m.statusComanda)
+            </div>
+            <div class="col-lg-3"></div>
         </div>
     </div>
 

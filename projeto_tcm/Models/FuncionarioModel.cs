@@ -5,7 +5,7 @@ namespace projeto_tcm.Models
     public class FuncionarioModel
     {
         [Display(Name = "ID:  ")]
-        public string idCadastro { get; set; }
+        public int idCadastro { get; set; }
 
         [Required(ErrorMessage = "Insira um telefone válido!")]
         [Display(Name = "Telefone:  ")]

@@ -68,39 +68,43 @@
             </div>
             <div class="col-lg-3"></div>
         </div>
+        <br/>
+        <div align="center">
+            @Html.LabelFor(m => m.statusComanda)
+            @Html.EditorFor(m => m.statusComanda)
+        </div>
     </div>
     <br />
 
     <div align="center">
-        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
+        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"> Adicionar</span></button>
     </div>
-
+}
     <hr />
 
-    <div align="center">
-        <p> Consultar comanda</p>
-    </div>
+    @using (Html.BeginForm("ConsultarComanda", "Comanda", FormMethod.Get))
+    {
+        <div align="center">
+            <p> Consultar comanda</p>
+        </div>
 
-    <div align="center">
-        @Html.LabelFor(m => m.idComanda)
+        <div align="center">
+            <label for="idComanda">ID:</label>
+            <input id="idComanda" type="tel" name="idComanda" />
+        </div>
+        <br />
 
-        @Html.EditorFor(m => m.idComanda)
-    </div>
+        <div align="center">
+            <button type="submit" class="btn btn-danger" formaction=@Url.Action("DeletarComanda") formmethod="post"><span class="glyphicon glyphicon-remove"> Excluir</span></button>
+            <button type="submit" class="btn btn-success"> <span class="glyphicon glyphicon-search"> Consultar</span></button>
+        </div>
 
-    <br />
+        <br />
+        <br />
 
-    <div align="center">
-        <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-remove"> Excluir </span></a>
-        <a class="btn btn-danger" href="@Url.Action("ConsultarComanda")"><span class="glyphicon glyphicon-ok"> Consultar </span></a>
-        <a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-ok"> Encerrar </span></a>
-    </div>
-
-    <br />
-    <br />
-
-    <div align="right">
-        <a class="btn btn-danger" href="@Url.Action("")"><span class="glyphicon glyphicon-th-list"> Visualizar todas</span></a>
-    </div>
+        <div align="right">
+            <a class="btn btn-warning" href="@Url.Action("ListarTodasComandas")"><span class="glyphicon glyphicon-th-list"> Visualizar todas</span> </a>
+        </div>
 
 
-}
+    }

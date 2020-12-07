@@ -15,19 +15,37 @@ namespace projeto_tcm.Controllers
             return View();
         }
 
-        public ActionResult ConsultarComanda()
+        public ActionResult ConsultarComanda(int idComanda)
         {
-            return View();
+            Comandas repositorio = new Comandas();
+            Comanda comanda = repositorio.ConsultarComanda(idComanda);
+            return View(comanda);
         }
 
         [HttpPost]
         public ActionResult CadastrarComanda(Comanda comanda)
         {
+            Comandas repositorio = new Comandas();
+            long id = repositorio.CadastroComanda(comanda);
 
-            Comandas cd = new Comandas();
-            cd.CadastroComanda(comanda);
+            return RedirectToAction("ConsultarComanda", new { idComanda = id });
 
-            return RedirectToAction("ConsultarComanda", comanda);
+        }
+
+        public ActionResult ListarTodasComandas()
+        {
+            Comandas repositorio = new Comandas();
+            List<Comanda> comandas = repositorio.ListarTodasComandas();
+
+            return View(comandas);
+        }
+
+        [HttpPost]
+        public ActionResult DeletarComanda(int idComanda)
+        {
+            Comandas repositorio = new Comandas();
+            repositorio.DeletarComanda(idComanda);
+            return RedirectToAction("Comanda");
         }
     }
 }

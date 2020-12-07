@@ -1,0 +1,52 @@
+﻿@model List<projeto_tcm.Models.Pagamento>
+
+@{
+
+    ViewBag.Title = "Listagem de pagamentos";
+}
+
+@Styles.Render("~/Content/css")
+
+
+@{
+    <div align="left">
+        <a class="nav-link" href="@Url.Action("Pagamento")"><span class="glyphicon glyphicon-chevron-left"> Voltar </span></a>
+    </div>
+    <div align="center">
+        <p>Listagem de pagamentos</p>
+    </div>
+    <br />
+    <div class="panel panel-default" align="center">
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Total</th>
+                        <th>Toal pago</th>
+                        <th>Troco</th>
+                        <th>Tipo</th>
+                        <th>Status</th>
+                        <th>Comanda</th>
+                        <th>CPF</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@item.idPagamento</td>
+                        <td>@item.totalPagamento</td>
+                        <td>@item.totalPago</td>
+                        <td>@item.trocoPagamento</td>
+                        <td>@item.tipoPag</td>
+                        <td>@item.statusPagamento</td>
+                        <td>@item.comandaPagamento</td>
+                        <td>@item.cpfPagamento</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

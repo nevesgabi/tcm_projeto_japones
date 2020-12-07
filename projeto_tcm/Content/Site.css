@@ -20,7 +20,6 @@ body {
     color: black !important;
     background-color: lightgray;
     text-decoration: none;
-    
 }
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -61,7 +60,12 @@ p{
 }
 
 .nav-cima {
-    background-color: lightgray;
+    background-color: #1C1C1C;
+    flex-direction:column-reverse;
+}
+
+.inicio{
+    margin-top: 80px;
 }
 
 
