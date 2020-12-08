@@ -11,7 +11,8 @@
     @Html.ValidationSummary(true)
     <br />
     <div align="center">
-        <p>Adicionar pagamento</p>
+        <p>Registrar pagamento</p>
+        <br/>
     </div>
     <div align="left">
         <div class="container-fluid">
@@ -20,7 +21,7 @@
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.comandaPagamento)
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     @Html.EditorFor(m => m.comandaPagamento)
                     @Html.ValidationMessageFor(model => model.comandaPagamento)
                 </div>
@@ -28,7 +29,7 @@
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.totalPagamento)
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     @Html.EditorFor(m => m.totalPagamento)
                     @Html.ValidationMessageFor(model => model.totalPagamento)
                 </div>
@@ -40,17 +41,17 @@
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.cpfPagamento)
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     @Html.EditorFor(m => m.cpfPagamento)
                     @Html.ValidationMessageFor(model => model.cpfPagamento)
                 </div>
                 <div class="col-lg-2"></div>
                 <div class="col-lg-1">
-                    @Html.LabelFor(m => m.statusPagamento)
+                    @Html.LabelFor(m => m.tipoPag)
                 </div>
-                <div class="col-lg-1">
-                    @Html.EditorFor(m => m.statusPagamento)
-                    @Html.ValidationMessageFor(model => model.statusPagamento)
+                <div class="col-lg-2">
+                    @Html.EditorFor(m => m.tipoPag)
+                    @Html.ValidationMessageFor(model => model.tipoPag)
                 </div>
                 <div class="col-lg-2"></div>
             </div>
@@ -60,7 +61,7 @@
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.totalPago)
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     @Html.EditorFor(m => m.totalPago)
                     @Html.ValidationMessageFor(model => model.totalPago)
                 </div>
@@ -68,21 +69,12 @@
                 <div class="col-lg-1">
                     @Html.LabelFor(m => m.trocoPagamento)
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     @Html.EditorFor(m => m.trocoPagamento)
                     @Html.ValidationMessageFor(model => model.trocoPagamento)
                 </div>
                 <div class="col-lg-2"></div>
             </div>
-            <br/>
-            <div align="center">
-                @Html.LabelFor(m => m.tipoPag)
-
-                @Html.EditorFor(m => m.tipoPag)
-
-                @Html.ValidationMessageFor(model => model.tipoPag)
-            </div>
-            <br/>
         </div>
 
     </div>
@@ -95,7 +87,7 @@
     @using (Html.BeginForm("ConsultarPagamento", "Pagamento", FormMethod.Get))
     {
         <div align="center">
-            <p> Consultar Pgamento</p>
+            <p> Consultar Pagamento</p>
         </div>
 
         <div align="center">

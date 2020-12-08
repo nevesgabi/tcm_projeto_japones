@@ -40,7 +40,6 @@
                 success: function (data) {
                     $('#adicionarItemForm')[0].reset();
                     obterItens(queryParam('idComanda'));
-                    alert("Item Adicionado!");
                 }
             });
         }
@@ -51,12 +50,11 @@
                 type: 'DELETE',
                 success: function (data) {
                     obterItens(queryParam('idComanda'));
-                    alert("Item Deletado!");
                 }
             });
         }
 
-        function queryParam (name) {
+        function queryParam(name) {
             var results = new RegExp('[\?&]' + name + '=([^&#]*)')
                 .exec(window.location.search);
 
@@ -119,31 +117,20 @@
             </div>
             <div class="col-lg-3"></div>
         </div>
-        <div class="row">
-            <div class="col-lg-3"></div>
-            <div class="col-lg-1 custom-info text-center">
-                @Html.LabelFor(m => m.itemComanda)
-            </div>
-            <div class="col-lg-1">
-                @Html.EditorFor(m => m.itemComanda)
-            </div>
-            <div class="col-lg-3"></div>
-        </div>
         <br />
-        <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-1 custom-info text-center">
-                @Html.LabelFor(m => m.statusComanda)
-            </div>
-            <div class="col-lg-1">
-                @Html.EditorFor(m => m.statusComanda)
-            </div>
-            <div class="col-lg-3"></div>
+        <div align="center">
+            @Html.LabelFor(m => m.statusComanda)
+            @Html.EditorFor(m => m.statusComanda)
         </div>
-    </div>
 
+    </div>
 }
+
 <hr />
+<div align="center"> 
+    <p>Adicionar item na comanda</p>
+    <br/>
+</div>
 <div id="adicionarItem"></div>
 <hr />
 <div id="listaItens"></div>

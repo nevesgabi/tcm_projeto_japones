@@ -10,7 +10,7 @@
     @Html.ValidationSummary(true)
     <br />
     <div align="center">
-        <p> Cadastrar comanda</p>
+        <p> Registrar comanda</p>
     </div>
     <br />
     <div class="container-fluid">
@@ -55,24 +55,12 @@
             <div class="col-lg-3"></div>
         </div>
         <br />
-        <div class="row">
-            <div class="col-lg-3"></div>
-            <div class="col-lg-1 custom-info text-center">
+            <div align="center">
                 @Html.LabelFor(m => m.funcionarioComanda)
-            </div>
-            <div class="col-lg-2">
                 @Html.EditorFor(m => m.funcionarioComanda)
                 @Html.ValidationMessageFor(model => model.funcionarioComanda)
             </div>
-            <div class="col-lg-3"></div>
         </div>
-        <br/>
-        <div align="center">
-            @Html.LabelFor(m => m.statusComanda)
-            @Html.EditorFor(m => m.statusComanda)
-            @Html.ValidationMessageFor(model => model.statusComanda)
-        </div>
-    </div>
     <br />
 
     <div align="center">
