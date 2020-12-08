@@ -48,12 +48,11 @@ namespace projeto_tcm.Repositorio
             while (reader.Read())
             {
                 pag.idPagamento = reader.GetInt16(reader.GetOrdinal("id_pag"));
-                pag.trocoPagamento = reader.GetString(reader.GetOrdinal("troco_pag"));
-                pag.totalPagamento = reader.GetString(reader.GetOrdinal("total_pagamento"));
-                pag.totalPago = reader.GetString(reader.GetOrdinal("total_pago"));
+                pag.trocoPagamento = reader.GetDouble(reader.GetOrdinal("troco_pag"));
+                pag.totalPagamento = reader.GetDouble(reader.GetOrdinal("total_pagamento"));
+                pag.totalPago = reader.GetDouble(reader.GetOrdinal("total_pago"));
                 pag.tipoPag = reader.GetString(reader.GetOrdinal("tipo_pag"));
                 pag.cpfPagamento = reader.GetString(reader.GetOrdinal("CPF_pag"));
-                pag.statusPagamento = reader.GetString(reader.GetOrdinal("status_pag"));
                 pag.comandaPagamento = reader.GetInt16(reader.GetOrdinal("id_comanda"));
             }
 
@@ -78,9 +77,9 @@ namespace projeto_tcm.Repositorio
             {
                 Pagamento pag = new Pagamento();
                 pag.idPagamento = reader.GetInt16(reader.GetOrdinal("id_pag"));
-                pag.totalPagamento = reader.GetString(reader.GetOrdinal("total_pagamento"));
-                pag.totalPago = reader.GetString(reader.GetOrdinal("total_pago"));
-                pag.trocoPagamento = reader.GetString(reader.GetOrdinal("troco_pag"));
+                pag.totalPagamento = reader.GetDouble(reader.GetOrdinal("total_pagamento"));
+                pag.totalPago = reader.GetDouble(reader.GetOrdinal("total_pago"));
+                pag.trocoPagamento = reader.GetDouble(reader.GetOrdinal("troco_pag"));
                 pag.tipoPag = reader.GetString(reader.GetOrdinal("tipo_pag"));
                 pag.statusPagamento = reader.GetString(reader.GetOrdinal("status_pag"));
                 pag.comandaPagamento = reader.GetInt16(reader.GetOrdinal("id_comanda"));

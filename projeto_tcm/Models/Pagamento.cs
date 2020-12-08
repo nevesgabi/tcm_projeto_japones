@@ -6,15 +6,15 @@ namespace projeto_tcm.Models
     {
         [Required(ErrorMessage = "Insira um troco válido!")]
         [Display(Name = "Troco:  ")]
-        public string trocoPagamento { get; set; }
+        public double trocoPagamento { get; set; }
 
         [Required(ErrorMessage = "Insira um total válido!")]
         [Display(Name = "Total:  ")]
-        public string totalPagamento { get; set; }
+        public double totalPagamento { get; set; }
 
         [Required(ErrorMessage = "Insira um total válido!")]
         [Display(Name = "Total pago:  ")]
-        public string totalPago { get; set; }
+        public double totalPago { get; set; }
 
         [Required(ErrorMessage = "Digite um tipo de pagamento válido!")]
         [RegularExpression(@"[a-zA-Z]{5,10}", ErrorMessage = "Insira no minimo 5 letras")]

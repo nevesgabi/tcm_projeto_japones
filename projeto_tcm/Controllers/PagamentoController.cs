@@ -27,6 +27,10 @@ namespace projeto_tcm.Controllers
         {
 
             Pagamentoo repositorio = new Pagamentoo();
+            ItemComandaRepositorio comandaRepo = new ItemComandaRepositorio();
+            List< ItemComandaFormatado> itens = comandaRepo.ListarItensComanda(pagamento.comandaPagamento);
+            pagamento.totalPagamento = itens.Sum(item => item.preco_item * item.qtd_item);
+            pagamento.trocoPagamento = pagamento.totalPago - pagamento.totalPagamento;
             long id = repositorio.CadastroPagamento(pagamento);
 
             return RedirectToAction("ConsultarPagamento", new { idPagamento = id });
